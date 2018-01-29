@@ -42,6 +42,7 @@ CREATE TABLE ${hiveconf:TEMP_TABLE} (
  clicks_in_7        BIGINT
 );
 
+explain
 INSERT INTO TABLE ${hiveconf:TEMP_TABLE}
 SELECT
   --wcs_user_sk,

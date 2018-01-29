@@ -49,6 +49,7 @@ CREATE TABLE ${hiveconf:TEMP_TABLE} (
 
 -- there are two possible version. Both are valid points of view
 -- version ONE where customers without returns are also part of the analysis
+explain
 INSERT INTO TABLE ${hiveconf:TEMP_TABLE} 
 SELECT
   ss_customer_sk AS user_sk,

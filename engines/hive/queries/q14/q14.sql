@@ -30,6 +30,7 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hiveconf:RESULT_DIR}';
 
 -- Begin: the real query part
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 SELECT CAST(amc as double) / CAST(pmc as double) am_pm_ratio
 FROM (

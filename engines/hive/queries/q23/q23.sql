@@ -77,6 +77,7 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hiveconf:RESULT_DIR}';
 
 -- Begin: the real query part
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 -- Iteration 2: Find items that had a coefficient of variation of 1.5 or larger
 -- in the given and the consecutive month

@@ -41,7 +41,7 @@ STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hive
 
 -- the real query part
 -- Find the most frequent ones
-
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 SELECT item_sk_1, item_sk_2, COUNT(*) AS cnt
 FROM

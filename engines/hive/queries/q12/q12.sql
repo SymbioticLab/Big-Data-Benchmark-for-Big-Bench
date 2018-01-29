@@ -32,6 +32,7 @@ CREATE TABLE ${hiveconf:RESULT_TABLE} (
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hiveconf:RESULT_DIR}';
 
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 SELECT DISTINCT wcs_user_sk -- Find all customers
 -- TODO check if 37134 is first day of the month

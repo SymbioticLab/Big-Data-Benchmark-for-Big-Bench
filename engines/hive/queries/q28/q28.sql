@@ -41,6 +41,7 @@ CREATE TABLE ${hiveconf:TEMP_TABLE2} (
 );
 
 --Split reviews table into training and testing
+explain
 FROM (
   SELECT
     pr_review_sk,

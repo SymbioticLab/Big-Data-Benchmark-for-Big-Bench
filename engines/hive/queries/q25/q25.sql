@@ -78,7 +78,7 @@ CREATE TABLE ${hiveconf:TEMP_RESULT_TABLE} (
   totalspend double
 );
 
-
+explain
 INSERT INTO TABLE ${hiveconf:TEMP_RESULT_TABLE}
 SELECT
   -- rounding of values not necessary

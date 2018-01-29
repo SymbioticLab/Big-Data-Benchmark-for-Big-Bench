@@ -24,6 +24,7 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hiveconf:RESULT_DIR}';
 
 -- the real query part
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 SELECT SUM(ss1.ss_quantity)
 FROM store_sales ss1, date_dim dd,customer_address ca1 , store s ,customer_demographics cd

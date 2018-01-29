@@ -49,6 +49,7 @@ CREATE TABLE ${hiveconf:TEMP_TABLE} (
   id15 double
 );
 
+explain
 INSERT INTO TABLE ${hiveconf:TEMP_TABLE}
 SELECT
   ss.ss_customer_sk AS cid,

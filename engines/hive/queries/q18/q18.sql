@@ -109,6 +109,7 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hiveconf:RESULT_DIR}';
 
 -- the real query - filter
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 SELECT s_name, r_date, r_sentence, sentiment, sentiment_word
 FROM ( --wrap in additional FROM(), because Sorting/distribute by with UDTF in select clause is not allowed

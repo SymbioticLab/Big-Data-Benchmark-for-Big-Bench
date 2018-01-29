@@ -28,6 +28,7 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n'
 STORED AS ${env:BIG_BENCH_hive_default_fileformat_result_table} LOCATION '${hiveconf:RESULT_DIR}';
 
 -- the real query part
+explain
 INSERT INTO TABLE ${hiveconf:RESULT_TABLE}
 -- no need to cast promotions or total to double: SUM(COL) already returned a DOUBLE
 SELECT promotions, total, promotions / total * 100
