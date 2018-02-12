@@ -1,5 +1,5 @@
-log=log_bb_50g
-err=err_bb_50g
+log=log_bb_500g
+err=err_bb_500g
 
 for i in $(seq -f "%02g" 1 30)
 do 
