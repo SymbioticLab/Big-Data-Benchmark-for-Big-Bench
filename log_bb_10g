@@ -1,4 +1,4 @@
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q01/q01.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q01/query01.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q01/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q01
@@ -12,8 +12,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q01_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q01_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q01_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q01/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -69,12 +67,12 @@ hive.exec.submit.local.task.via.child=true
 Added [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/Resources/bigbenchqueriesmr.jar] to class path
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/Resources/bigbenchqueriesmr.jar]
 OK
-Time taken: 0.017 seconds
+Time taken: 0.014 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 2.183 seconds
+Time taken: 0.105 seconds
 OK
-Time taken: 0.476 seconds
+Time taken: 0.51 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-8 is a root stage
@@ -95,10 +93,10 @@ STAGE PLANS:
         soldtogetherpairs:solditemsperticket:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (i_item_sk is not null and (i_category_id) IN (1, 2, 3)) (type: boolean)
-              Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 ss_item_sk (type: bigint)
@@ -155,7 +153,7 @@ STAGE PLANS:
             Statistics: Num rows: 91792 Data size: 131077725 Basic stats: COMPLETE Column stats: NONE
             UDTF Operator
               Statistics: Num rows: 91792 Data size: 131077725 Basic stats: COMPLETE Column stats: NONE
-              function name: io.bigdatabenchmark.v1.queries.udf.PairwiseUDTF@43e86c0c
+              function name: io.bigdatabenchmark.v1.queries.udf.PairwiseUDTF@450f0d89
               Group By Operator
                 aggregations: count()
                 keys: itema (type: string), itemb (type: string)
@@ -239,11 +237,11 @@ STAGE PLANS:
   Stage: Stage-5
     Stats-Aggr Operator
 
-Time taken: 1.683 seconds, Fetched: 163 row(s)
+Time taken: 2.273 seconds, Fetched: 163 row(s)
 ======= q01_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:46:04 1517197564
-Stop  timestamp: 2018/01/28:21:46:21 1517197581
-Duration:  0h 0m 17s
+Start timestamp: 2018/02/12:11:23:07 1518456187
+Stop  timestamp: 2018/02/12:11:23:23 1518456203
+Duration:  0h 0m 16s
 q01_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -252,7 +250,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q01_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q01_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q02/q02.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q02/query02.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q02/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q02
@@ -266,8 +264,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q02_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q02_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q02_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q02/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -326,14 +322,14 @@ OK
 Time taken: 0.012 seconds
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q02/q2-sessionize.py]
 OK
-Time taken: 0.068 seconds
+Time taken: 0.066 seconds
 OK
-Time taken: 0.86 seconds
+Time taken: 0.626 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.634 seconds
+Time taken: 0.012 seconds
 OK
-Time taken: 0.303 seconds
+Time taken: 0.137 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-1 is a root stage
@@ -505,12 +501,12 @@ STAGE PLANS:
   Stage: Stage-5
     Stats-Aggr Operator
 
-Time taken: 0.68 seconds, Fetched: 170 row(s)
+Time taken: 0.621 seconds, Fetched: 170 row(s)
 OK
-Time taken: 0.081 seconds
+Time taken: 1.471 seconds
 ======= q02_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:46:40 1517197600
-Stop  timestamp: 2018/01/28:21:46:55 1517197615
+Start timestamp: 2018/02/12:11:23:42 1518456222
+Stop  timestamp: 2018/02/12:11:23:57 1518456237
 Duration:  0h 0m 15s
 q02_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
@@ -520,7 +516,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q02_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q02_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q03/q03.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q03/query03.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q03/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q03
@@ -534,8 +530,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q03_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q03_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q03_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q03/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -591,9 +585,9 @@ hive.exec.submit.local.task.via.child=true
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q03/q03_filterLast_N_viewedItmes_within_y_days.py]
 hive.exec.compress.output=false
 OK
-Time taken: 1.95 seconds
+Time taken: 0.064 seconds
 OK
-Time taken: 0.56 seconds
+Time taken: 0.508 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-1 is a root stage
@@ -655,10 +649,10 @@ STAGE PLANS:
         distributed:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (i_item_sk is not null and (i_category_id) IN (2, 3)) (type: boolean)
-              Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 i_item_sk (type: bigint)
@@ -771,11 +765,11 @@ STAGE PLANS:
   Stage: Stage-6
     Stats-Aggr Operator
 
-Time taken: 0.928 seconds, Fetched: 176 row(s)
+Time taken: 1.05 seconds, Fetched: 176 row(s)
 ======= q03_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:47:14 1517197634
-Stop  timestamp: 2018/01/28:21:47:30 1517197650
-Duration:  0h 0m 16s
+Start timestamp: 2018/02/12:11:24:15 1518456255
+Stop  timestamp: 2018/02/12:11:24:30 1518456270
+Duration:  0h 0m 15s
 q03_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -784,7 +778,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q03_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q03_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q04/q04.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q04/query04.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q04/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q04
@@ -798,9 +792,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q04_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q04_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q04_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q04/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -855,14 +847,14 @@ hive.exec.submit.local.task.via.child=true
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q04/q4_abandonedShoppingCarts.py]
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q04/q4_sessionize.py]
 OK
-Time taken: 1.848 seconds
+Time taken: 0.067 seconds
 OK
-Time taken: 0.608 seconds
+Time taken: 0.966 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 0.123 seconds
+Time taken: 0.013 seconds
 OK
-Time taken: 0.283 seconds
+Time taken: 0.177 seconds
 FAILED: ParseException line 24:0 missing EOF at ';' near 'abandonedShoppingCartsPageCountsPerSession'
 An error occured while running command:
 ==========
@@ -870,9 +862,9 @@ runEngineCmd -f /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/qu
 ==========
 Please check the log files for details
 ======= q04_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:47:49 1517197669
-Stop  timestamp: 2018/01/28:21:48:04 1517197684
-Duration:  0h 0m 15s
+Start timestamp: 2018/02/12:11:24:48 1518456288
+Stop  timestamp: 2018/02/12:11:25:02 1518456302
+Duration:  0h 0m 14s
 q04_hive_run_query_0 FAILED exit code: 64 
 ----- result -----
 EMPTY  bytes: 0
@@ -886,7 +878,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q05/q05.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q05/query05.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q05/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q05
@@ -900,8 +892,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q05_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q05_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q05_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 =========================
 q05 Step 1/3: Executing hive queries
@@ -959,9 +949,9 @@ bigbench.hive.optimize.sampling.orderby.percent=0.1
 hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 OK
-Time taken: 1.914 seconds
+Time taken: 0.065 seconds
 OK
-Time taken: 0.663 seconds
+Time taken: 0.875 seconds
 No Stats for bigbench@web_clickstreams, Columns: wcs_item_sk, wcs_user_sk
 No Stats for bigbench@item, Columns: i_category, i_category_id, i_item_sk
 No Stats for bigbench@customer, Columns: c_customer_sk, c_current_cdemo_sk
@@ -988,14 +978,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_0:$hdt$_1:it 
           TableScan
             alias: it
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: i_item_sk is not null (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint), i_category_id (type: int), i_category (type: string)
                 outputColumnNames: _col0, _col1, _col2
-                Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col0 (type: bigint)
@@ -1064,14 +1054,14 @@ STAGE PLANS:
         $hdt$_1:ct 
           TableScan
             alias: ct
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (c_customer_sk is not null and c_current_cdemo_sk is not null) (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: c_customer_sk (type: bigint), c_current_cdemo_sk (type: bigint)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col0 (type: bigint)
@@ -1161,7 +1151,7 @@ STAGE PLANS:
   Stage: Stage-5
     Stats-Aggr Operator
 
-Time taken: 3.024 seconds, Fetched: 194 row(s)
+Time taken: 3.24 seconds, Fetched: 194 row(s)
 =========================
 q05 Step 2/3: logistic regression with spark-mllib with direct metastore access
 =========================
@@ -1173,9 +1163,9 @@ spark-submit --class io.bigdatabenchmark.v1.queries.q05.LogisticRegression /user
 ==========
 Please check the log files for details
 ======= q05_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:48:24 1517197704
-Stop  timestamp: 2018/01/28:21:48:42 1517197722
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:25:21 1518456321
+Stop  timestamp: 2018/02/12:11:25:37 1518456337
+Duration:  0h 0m 16s
 q05_hive_run_query_0 FAILED exit code: 127 
 ----- result -----
 EMPTY  bytes: 0
@@ -1189,7 +1179,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q06/q06.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q06/query06.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q06/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q06
@@ -1203,8 +1193,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q06_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q06_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q06_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q06/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -1258,18 +1246,18 @@ bigbench.hive.optimize.sampling.orderby.percent=0.1
 hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 OK
-Time taken: 0.092 seconds
+Time taken: 0.073 seconds
 OK
-Time taken: 0.008 seconds
+Time taken: 0.007 seconds
 OK
-Time taken: 2.03 seconds
+Time taken: 1.876 seconds
 OK
-Time taken: 0.272 seconds
+Time taken: 0.282 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.647 seconds
+Time taken: 0.012 seconds
 OK
-Time taken: 0.275 seconds
+Time taken: 0.164 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-20 is a root stage
@@ -1386,10 +1374,10 @@ STAGE PLANS:
         c 
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 _col0 (type: bigint)
@@ -1409,14 +1397,14 @@ STAGE PLANS:
                 1 _col0 (type: bigint)
                 2 c_customer_sk (type: bigint)
               outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col14, _col15, _col16, _col20, _col21, _col22
-              Statistics: Num rows: 217800 Data size: 193676040 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 217800 Data size: 193621590 Basic stats: COMPLETE Column stats: NONE
               Filter Operator
                 predicate: ((_col3 = _col6) and ((_col5 / _col4) > (_col2 / _col1)) and (_col0 = _col3)) (type: boolean)
-                Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
                 Select Operator
                   expressions: (_col5 / _col4) (type: decimal(38,12)), _col6 (type: bigint), _col14 (type: string), _col15 (type: string), _col16 (type: string), _col20 (type: string), _col21 (type: string), _col22 (type: string)
                   outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7
-                  Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
                   File Output Operator
                     compressed: false
                     table:
@@ -1433,24 +1421,24 @@ STAGE PLANS:
             Reduce Output Operator
               key expressions: _col0 (type: decimal(38,12)), _col1 (type: bigint), _col2 (type: string), _col3 (type: string), _col4 (type: string), _col5 (type: string), _col6 (type: string)
               sort order: -++++++
-              Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
               TopN Hash Memory Usage: 0.1
               value expressions: _col7 (type: string)
       Reduce Operator Tree:
         Select Operator
           expressions: KEY.reducesinkkey0 (type: decimal(38,12)), KEY.reducesinkkey1 (type: bigint), KEY.reducesinkkey2 (type: string), KEY.reducesinkkey3 (type: string), KEY.reducesinkkey4 (type: string), KEY.reducesinkkey5 (type: string), KEY.reducesinkkey6 (type: string), VALUE._col0 (type: string)
           outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7
-          Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
           Limit
             Number of rows: 100
-            Statistics: Num rows: 100 Data size: 88900 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 100 Data size: 88800 Basic stats: COMPLETE Column stats: NONE
             Select Operator
               expressions: CAST( _col0 AS decimal(15,1)) (type: decimal(15,1)), _col1 (type: bigint), _col2 (type: string), _col3 (type: string), _col4 (type: string), _col5 (type: string), _col6 (type: string), _col7 (type: string)
               outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7
-              Statistics: Num rows: 100 Data size: 88900 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 100 Data size: 88800 Basic stats: COMPLETE Column stats: NONE
               File Output Operator
                 compressed: false
-                Statistics: Num rows: 100 Data size: 88900 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 100 Data size: 88800 Basic stats: COMPLETE Column stats: NONE
                 table:
                     input format: org.apache.hadoop.mapred.TextInputFormat
                     output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -1490,10 +1478,10 @@ STAGE PLANS:
         c 
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 _col0 (type: bigint)
@@ -1513,14 +1501,14 @@ STAGE PLANS:
                 1 _col0 (type: bigint)
                 2 c_customer_sk (type: bigint)
               outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col14, _col15, _col16, _col20, _col21, _col22
-              Statistics: Num rows: 217800 Data size: 193676040 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 217800 Data size: 193621590 Basic stats: COMPLETE Column stats: NONE
               Filter Operator
                 predicate: ((_col3 = _col6) and ((_col5 / _col4) > (_col2 / _col1)) and (_col0 = _col3)) (type: boolean)
-                Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
                 Select Operator
                   expressions: (_col5 / _col4) (type: decimal(38,12)), _col6 (type: bigint), _col14 (type: string), _col15 (type: string), _col16 (type: string), _col20 (type: string), _col21 (type: string), _col22 (type: string)
                   outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7
-                  Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
                   File Output Operator
                     compressed: false
                     table:
@@ -1560,10 +1548,10 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Map Join Operator
                 condition map:
                      Inner Join 0 to 1
@@ -1573,14 +1561,14 @@ STAGE PLANS:
                   1 _col0 (type: bigint)
                   2 c_customer_sk (type: bigint)
                 outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col14, _col15, _col16, _col20, _col21, _col22
-                Statistics: Num rows: 217800 Data size: 193676040 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 217800 Data size: 193621590 Basic stats: COMPLETE Column stats: NONE
                 Filter Operator
                   predicate: ((_col3 = _col6) and ((_col5 / _col4) > (_col2 / _col1)) and (_col0 = _col3)) (type: boolean)
-                  Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
                   Select Operator
                     expressions: (_col5 / _col4) (type: decimal(38,12)), _col6 (type: bigint), _col14 (type: string), _col15 (type: string), _col16 (type: string), _col20 (type: string), _col21 (type: string), _col22 (type: string)
                     outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7
-                    Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
                     File Output Operator
                       compressed: false
                       table:
@@ -1609,15 +1597,15 @@ STAGE PLANS:
               value expressions: _col1 (type: decimal(26,6)), _col2 (type: decimal(26,6))
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Reduce Output Operator
                 key expressions: c_customer_sk (type: bigint)
                 sort order: +
                 Map-reduce partition columns: c_customer_sk (type: bigint)
-                Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
                 value expressions: c_first_name (type: string), c_last_name (type: string), c_preferred_cust_flag (type: string), c_birth_country (type: string), c_login (type: string), c_email_address (type: string)
       Reduce Operator Tree:
         Join Operator
@@ -1629,14 +1617,14 @@ STAGE PLANS:
             1 _col0 (type: bigint)
             2 c_customer_sk (type: bigint)
           outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col14, _col15, _col16, _col20, _col21, _col22
-          Statistics: Num rows: 217800 Data size: 193676040 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 217800 Data size: 193621590 Basic stats: COMPLETE Column stats: NONE
           Filter Operator
             predicate: ((_col3 = _col6) and ((_col5 / _col4) > (_col2 / _col1)) and (_col0 = _col3)) (type: boolean)
-            Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
             Select Operator
               expressions: (_col5 / _col4) (type: decimal(38,12)), _col6 (type: bigint), _col14 (type: string), _col15 (type: string), _col16 (type: string), _col20 (type: string), _col21 (type: string), _col22 (type: string)
               outputColumnNames: _col0, _col1, _col2, _col3, _col4, _col5, _col6, _col7
-              Statistics: Num rows: 18150 Data size: 16139670 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 18150 Data size: 16135132 Basic stats: COMPLETE Column stats: NONE
               File Output Operator
                 compressed: false
                 table:
@@ -1718,14 +1706,14 @@ STAGE PLANS:
                   output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                   serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 1.155 seconds, Fetched: 447 row(s)
+Time taken: 1.275 seconds, Fetched: 447 row(s)
 OK
-Time taken: 0.082 seconds
+Time taken: 1.562 seconds
 OK
-Time taken: 0.083 seconds
+Time taken: 0.085 seconds
 ======= q06_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:49:01 1517197741
-Stop  timestamp: 2018/01/28:21:49:19 1517197759
+Start timestamp: 2018/02/12:11:25:56 1518456356
+Stop  timestamp: 2018/02/12:11:26:14 1518456374
 Duration:  0h 0m 18s
 q06_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
@@ -1735,7 +1723,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q06_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q06_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q07/q07.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q07/query07.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q07/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q07
@@ -1749,8 +1737,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q07_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q07_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q07_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q07/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -1804,9 +1790,9 @@ bigbench.hive.optimize.sampling.orderby.percent=0.1
 hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 OK
-Time taken: 0.09 seconds
+Time taken: 0.073 seconds
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128204950_3f034c92-f11b-4bc0-afba-971a3e95d06f
+Query ID = wentingt_20180212102645_314f07b8-0cd4-4f13-9d8f-1a5550b9abdb
 Total jobs = 2
 Launching Job 1 out of 2
 Number of reduce tasks not specified. Estimated from input data size: 1
@@ -1816,46 +1802,46 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1517178164277_0082, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0082/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0082
+Starting Job = job_1518452786757_0085, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0085/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0085
 Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 1
-2018-01-28 20:50:05,188 Stage-3 map = 0%,  reduce = 0%
-2018-01-28 20:50:12,529 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 6.2 sec
-2018-01-28 20:50:19,783 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 12.52 sec
-MapReduce Total cumulative CPU time: 12 seconds 520 msec
-Ended Job = job_1517178164277_0082
+2018-02-12 10:26:59,486 Stage-3 map = 0%,  reduce = 0%
+2018-02-12 10:27:06,833 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 6.55 sec
+2018-02-12 10:27:14,102 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 12.36 sec
+MapReduce Total cumulative CPU time: 12 seconds 360 msec
+Ended Job = job_1518452786757_0085
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-2018-01-28 20:50:26	Starting to launch local task to process map join;	maximum memory = 477626368
-2018-01-28 20:50:28	Dump the side-table for tag: 0 with group count: 9 into file: file:/tmp/wentingt/d51ae59d-886e-4298-ac00-ac3a7a54b87c/hive_2018-01-28_20-49-50_410_2769086312243034265-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile00--.hashtable
-2018-01-28 20:50:28	Uploaded 1 File to: file:/tmp/wentingt/d51ae59d-886e-4298-ac00-ac3a7a54b87c/hive_2018-01-28_20-49-50_410_2769086312243034265-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile00--.hashtable (214462 bytes)
-2018-01-28 20:50:28	End of local task; Time Taken: 2.133 sec.
+2018-02-12 10:27:20	Starting to launch local task to process map join;	maximum memory = 477626368
+2018-02-12 10:27:22	Dump the side-table for tag: 0 with group count: 9 into file: file:/tmp/wentingt/137b44eb-86b0-4ae4-96fe-0cb10c1b0d20/hive_2018-02-12_10-26-45_280_2234568540384889783-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile00--.hashtable
+2018-02-12 10:27:22	Uploaded 1 File to: file:/tmp/wentingt/137b44eb-86b0-4ae4-96fe-0cb10c1b0d20/hive_2018-02-12_10-26-45_280_2234568540384889783-1/-local-10005/HashTable-Stage-4/MapJoin-mapfile00--.hashtable (214462 bytes)
+2018-02-12 10:27:22	End of local task; Time Taken: 2.199 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 2 out of 2
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1517178164277_0083, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0083/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0083
+Starting Job = job_1518452786757_0086, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0086/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0086
 Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 0
-2018-01-28 20:50:39,546 Stage-4 map = 0%,  reduce = 0%
-2018-01-28 20:50:46,800 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 6.1 sec
-MapReduce Total cumulative CPU time: 6 seconds 100 msec
-Ended Job = job_1517178164277_0083
+2018-02-12 10:27:40,721 Stage-4 map = 0%,  reduce = 0%
+2018-02-12 10:27:46,983 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 6.26 sec
+MapReduce Total cumulative CPU time: 6 seconds 260 msec
+Ended Job = job_1518452786757_0086
 Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/q07_hive_run_query_0_temp
 MapReduce Jobs Launched: 
-Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 12.52 sec   HDFS Read: 75962 HDFS Write: 433 SUCCESS
-Stage-Stage-4: Map: 1   Cumulative CPU: 6.1 sec   HDFS Read: 6869 HDFS Write: 38187 SUCCESS
+Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 12.36 sec   HDFS Read: 75914 HDFS Write: 433 SUCCESS
+Stage-Stage-4: Map: 1   Cumulative CPU: 6.26 sec   HDFS Read: 6869 HDFS Write: 38187 SUCCESS
 Total MapReduce CPU Time Spent: 18 seconds 620 msec
 OK
-Time taken: 58.319 seconds
+Time taken: 63.62 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.624 seconds
+Time taken: 0.011 seconds
 OK
-Time taken: 0.063 seconds
+Time taken: 0.073 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-21 is a root stage
@@ -1883,10 +1869,10 @@ STAGE PLANS:
         a 
           TableScan
             alias: a
-            Statistics: Num rows: 49500 Data size: 55798875 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 49500 Data size: 55831875 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (ca_address_sk is not null and ca_state is not null) (type: boolean)
-              Statistics: Num rows: 49500 Data size: 55798875 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 49500 Data size: 55831875 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 ca_address_sk (type: bigint)
@@ -1897,10 +1883,10 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (c_current_addr_sk is not null and c_customer_sk is not null) (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Map Join Operator
                 condition map:
                      Inner Join 0 to 1
@@ -1908,7 +1894,7 @@ STAGE PLANS:
                   0 ca_address_sk (type: bigint)
                   1 c_current_addr_sk (type: bigint)
                 outputColumnNames: _col0, _col8, _col16, _col20
-                Statistics: Num rows: 108900 Data size: 96838020 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 108900 Data size: 96810795 Basic stats: COMPLETE Column stats: NONE
                 File Output Operator
                   compressed: false
                   table:
@@ -2148,7 +2134,7 @@ STAGE PLANS:
               key expressions: _col16 (type: bigint)
               sort order: +
               Map-reduce partition columns: _col16 (type: bigint)
-              Statistics: Num rows: 108900 Data size: 96838020 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 108900 Data size: 96810795 Basic stats: COMPLETE Column stats: NONE
               value expressions: _col0 (type: bigint), _col8 (type: string), _col20 (type: bigint)
           TableScan
             alias: s
@@ -2178,13 +2164,13 @@ STAGE PLANS:
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                 serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 0.656 seconds, Fetched: 321 row(s)
+Time taken: 0.786 seconds, Fetched: 321 row(s)
 OK
-Time taken: 0.099 seconds
+Time taken: 1.607 seconds
 ======= q07_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:49:38 1517197778
-Stop  timestamp: 2018/01/28:21:50:51 1517197851
-Duration:  0h 1m 13s
+Start timestamp: 2018/02/12:11:26:33 1518456393
+Stop  timestamp: 2018/02/12:11:27:51 1518456471
+Duration:  0h 1m 18s
 q07_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -2193,7 +2179,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q07_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q07_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q08/q08.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q08/query08.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q08/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q08
@@ -2207,8 +2193,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q08_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q08_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q08_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q08/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -2263,47 +2247,47 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q08/q08_filter_sales_with_reviews_viewed_before.py]
 OK
-Time taken: 0.095 seconds
-OK
-Time taken: 0.012 seconds
+Time taken: 0.089 seconds
 OK
 Time taken: 0.01 seconds
+OK
+Time taken: 0.008 seconds
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128205122_98d6f627-8f2c-47ac-9223-9a6dcf963ed0
+Query ID = wentingt_20180212102822_144cb528-b919-4711-8aca-4ec866ade20b
 Total jobs = 3
 Launching Job 1 out of 3
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1517178164277_0084, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0084/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0084
+Starting Job = job_1518452786757_0087, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0087/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0087
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2018-01-28 20:51:39,787 Stage-1 map = 0%,  reduce = 0%
-2018-01-28 20:51:48,171 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 6.27 sec
-MapReduce Total cumulative CPU time: 6 seconds 270 msec
-Ended Job = job_1517178164277_0084
+2018-02-12 10:28:39,305 Stage-1 map = 0%,  reduce = 0%
+2018-02-12 10:28:46,643 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 7.2 sec
+MapReduce Total cumulative CPU time: 7 seconds 200 msec
+Ended Job = job_1518452786757_0087
 Stage-4 is selected by condition resolver.
 Stage-3 is filtered out by condition resolver.
 Stage-5 is filtered out by condition resolver.
-Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/.hive-staging_hive_2018-01-28_20-51-22_980_2555611941228769354-1/-ext-10002
+Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/.hive-staging_hive_2018-02-12_10-28-22_790_4915668605799563477-1/-ext-10002
 Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/q08_hive_run_query_0_temp_daterange
 MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1   Cumulative CPU: 6.27 sec   HDFS Read: 282604 HDFS Write: 2299 SUCCESS
-Total MapReduce CPU Time Spent: 6 seconds 270 msec
+Stage-Stage-1: Map: 1   Cumulative CPU: 7.2 sec   HDFS Read: 282604 HDFS Write: 2299 SUCCESS
+Total MapReduce CPU Time Spent: 7 seconds 200 msec
 OK
-Time taken: 27.13 seconds
+Time taken: 25.911 seconds
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128205150_f31930a7-9439-49a5-b61c-277032f7a57b
+Query ID = wentingt_20180212102848_f133a415-74c6-4665-8c2b-adec4d11a5e3
 Total jobs = 2
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-2018-01-28 20:51:55	Starting to launch local task to process map join;	maximum memory = 477626368
-2018-01-28 20:51:57	Dump the side-table for tag: 1 with group count: 60 into file: file:/tmp/wentingt/b2e26b6c-82a3-4c28-b613-71bedfd560ef/hive_2018-01-28_20-51-50_122_2304475827129080778-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile01--.hashtable
-2018-01-28 20:51:57	Uploaded 1 File to: file:/tmp/wentingt/b2e26b6c-82a3-4c28-b613-71bedfd560ef/hive_2018-01-28_20-51-50_122_2304475827129080778-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile01--.hashtable (1834 bytes)
-2018-01-28 20:51:57	Dump the side-table for tag: 1 with group count: 366 into file: file:/tmp/wentingt/b2e26b6c-82a3-4c28-b613-71bedfd560ef/hive_2018-01-28_20-51-50_122_2304475827129080778-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile11--.hashtable
-2018-01-28 20:51:57	Uploaded 1 File to: file:/tmp/wentingt/b2e26b6c-82a3-4c28-b613-71bedfd560ef/hive_2018-01-28_20-51-50_122_2304475827129080778-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile11--.hashtable (7615 bytes)
-2018-01-28 20:51:57	End of local task; Time Taken: 2.155 sec.
+2018-02-12 10:28:55	Starting to launch local task to process map join;	maximum memory = 477626368
+2018-02-12 10:28:57	Dump the side-table for tag: 1 with group count: 60 into file: file:/tmp/wentingt/ee304cea-356c-4340-8028-cd2b829fc446/hive_2018-02-12_10-28-48_713_1101006557626926898-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile01--.hashtable
+2018-02-12 10:28:57	Uploaded 1 File to: file:/tmp/wentingt/ee304cea-356c-4340-8028-cd2b829fc446/hive_2018-02-12_10-28-48_713_1101006557626926898-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile01--.hashtable (1834 bytes)
+2018-02-12 10:28:57	Dump the side-table for tag: 1 with group count: 366 into file: file:/tmp/wentingt/ee304cea-356c-4340-8028-cd2b829fc446/hive_2018-02-12_10-28-48_713_1101006557626926898-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile11--.hashtable
+2018-02-12 10:28:57	Uploaded 1 File to: file:/tmp/wentingt/ee304cea-356c-4340-8028-cd2b829fc446/hive_2018-02-12_10-28-48_713_1101006557626926898-1/-local-10006/HashTable-Stage-3/MapJoin-mapfile11--.hashtable (7615 bytes)
+2018-02-12 10:28:57	End of local task; Time Taken: 2.228 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 1 out of 2
@@ -2314,15 +2298,14 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1517178164277_0085, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0085/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0085
-Hadoop job information for Stage-3: number of mappers: 2; number of reducers: 1
-2018-01-28 20:52:10,416 Stage-3 map = 0%,  reduce = 0%
-2018-01-28 20:52:21,810 Stage-3 map = 50%,  reduce = 0%, Cumulative CPU 13.09 sec
-2018-01-28 20:52:22,849 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 27.44 sec
-2018-01-28 20:52:35,742 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 38.82 sec
-MapReduce Total cumulative CPU time: 38 seconds 820 msec
-Ended Job = job_1517178164277_0085
+Starting Job = job_1518452786757_0088, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0088/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0088
+Hadoop job information for Stage-3: number of mappers: 1; number of reducers: 1
+2018-02-12 10:29:10,647 Stage-3 map = 0%,  reduce = 0%
+2018-02-12 10:29:25,149 Stage-3 map = 100%,  reduce = 0%, Cumulative CPU 17.64 sec
+2018-02-12 10:29:37,652 Stage-3 map = 100%,  reduce = 100%, Cumulative CPU 29.42 sec
+MapReduce Total cumulative CPU time: 29 seconds 420 msec
+Ended Job = job_1518452786757_0088
 Launching Job 2 out of 2
 Number of reduce tasks not specified. Estimated from input data size: 1
 In order to change the average load for a reducer (in bytes):
@@ -2331,55 +2314,55 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1517178164277_0086, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0086/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0086
+Starting Job = job_1518452786757_0089, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0089/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0089
 Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 1
-2018-01-28 20:52:46,766 Stage-4 map = 0%,  reduce = 0%
-2018-01-28 20:52:55,013 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 5.91 sec
-2018-01-28 20:53:02,219 Stage-4 map = 100%,  reduce = 100%, Cumulative CPU 12.85 sec
-MapReduce Total cumulative CPU time: 12 seconds 850 msec
-Ended Job = job_1517178164277_0086
+2018-02-12 10:29:49,442 Stage-4 map = 0%,  reduce = 0%
+2018-02-12 10:29:55,652 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 5.81 sec
+2018-02-12 10:30:03,903 Stage-4 map = 100%,  reduce = 100%, Cumulative CPU 11.92 sec
+MapReduce Total cumulative CPU time: 11 seconds 920 msec
+Ended Job = job_1518452786757_0089
 Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/q08_hive_run_query_0_temp_sales_review
 MapReduce Jobs Launched: 
-Stage-Stage-3: Map: 2  Reduce: 1   Cumulative CPU: 38.82 sec   HDFS Read: 22755399 HDFS Write: 173056 SUCCESS
-Stage-Stage-4: Map: 1  Reduce: 1   Cumulative CPU: 12.85 sec   HDFS Read: 177653 HDFS Write: 51990 SUCCESS
-Total MapReduce CPU Time Spent: 51 seconds 670 msec
+Stage-Stage-3: Map: 1  Reduce: 1   Cumulative CPU: 29.42 sec   HDFS Read: 22744810 HDFS Write: 173056 SUCCESS
+Stage-Stage-4: Map: 1  Reduce: 1   Cumulative CPU: 11.92 sec   HDFS Read: 177653 HDFS Write: 51990 SUCCESS
+Total MapReduce CPU Time Spent: 41 seconds 340 msec
 OK
-Time taken: 73.502 seconds
+Time taken: 76.622 seconds
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128205303_0f41989d-50fe-4d71-9a79-e3f45fdf7fb3
+Query ID = wentingt_20180212103005_a15d65cc-7108-4135-ae0c-5416c4c9dc3d
 Total jobs = 1
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-2018-01-28 20:53:09	Starting to launch local task to process map join;	maximum memory = 477626368
-2018-01-28 20:53:11	Dump the side-table for tag: 1 with group count: 366 into file: file:/tmp/wentingt/b2e26b6c-82a3-4c28-b613-71bedfd560ef/hive_2018-01-28_20-53-03_637_2586084679933563033-1/-local-10004/HashTable-Stage-4/MapJoin-mapfile21--.hashtable
-2018-01-28 20:53:11	Uploaded 1 File to: file:/tmp/wentingt/b2e26b6c-82a3-4c28-b613-71bedfd560ef/hive_2018-01-28_20-53-03_637_2586084679933563033-1/-local-10004/HashTable-Stage-4/MapJoin-mapfile21--.hashtable (7615 bytes)
-2018-01-28 20:53:11	End of local task; Time Taken: 1.766 sec.
+2018-02-12 10:30:11	Starting to launch local task to process map join;	maximum memory = 477626368
+2018-02-12 10:30:13	Dump the side-table for tag: 1 with group count: 366 into file: file:/tmp/wentingt/ee304cea-356c-4340-8028-cd2b829fc446/hive_2018-02-12_10-30-05_348_3255602823999832558-1/-local-10004/HashTable-Stage-4/MapJoin-mapfile21--.hashtable
+2018-02-12 10:30:13	Uploaded 1 File to: file:/tmp/wentingt/ee304cea-356c-4340-8028-cd2b829fc446/hive_2018-02-12_10-30-05_348_3255602823999832558-1/-local-10004/HashTable-Stage-4/MapJoin-mapfile21--.hashtable (7615 bytes)
+2018-02-12 10:30:13	End of local task; Time Taken: 2.009 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1517178164277_0087, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0087/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0087
-Hadoop job information for Stage-4: number of mappers: 2; number of reducers: 0
-2018-01-28 20:53:24,658 Stage-4 map = 0%,  reduce = 0%
-2018-01-28 20:53:33,058 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 16.63 sec
-MapReduce Total cumulative CPU time: 16 seconds 630 msec
-Ended Job = job_1517178164277_0087
+Starting Job = job_1518452786757_0090, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0090/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0090
+Hadoop job information for Stage-4: number of mappers: 1; number of reducers: 0
+2018-02-12 10:30:34,283 Stage-4 map = 0%,  reduce = 0%
+2018-02-12 10:30:42,559 Stage-4 map = 100%,  reduce = 0%, Cumulative CPU 9.2 sec
+MapReduce Total cumulative CPU time: 9 seconds 200 msec
+Ended Job = job_1518452786757_0090
 Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/q08_hive_run_query_0_temp_websales_date
 MapReduce Jobs Launched: 
-Stage-Stage-4: Map: 2   Cumulative CPU: 16.63 sec   HDFS Read: 2252490 HDFS Write: 1813394 SUCCESS
-Total MapReduce CPU Time Spent: 16 seconds 630 msec
+Stage-Stage-4: Map: 1   Cumulative CPU: 9.2 sec   HDFS Read: 2241704 HDFS Write: 1813285 SUCCESS
+Total MapReduce CPU Time Spent: 9 seconds 200 msec
 OK
-Time taken: 30.825 seconds
+Time taken: 38.622 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.746 seconds
+Time taken: 0.011 seconds
 OK
-Time taken: 0.074 seconds
+Time taken: 0.068 seconds
 No Stats for bigbench@q08_hive_run_query_0_temp_websales_date, Columns: ws_order_number, ws_net_paid
 No Stats for bigbench@q08_hive_run_query_0_temp_sales_review, Columns: wcs_sales_sk
 No Stats for bigbench@q08_hive_run_query_0_temp_websales_date, Columns: ws_net_paid
@@ -2639,17 +2622,17 @@ STAGE PLANS:
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                 serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 0.695 seconds, Fetched: 252 row(s)
+Time taken: 0.959 seconds, Fetched: 252 row(s)
 OK
-Time taken: 0.089 seconds
+Time taken: 1.43 seconds
 OK
-Time taken: 0.083 seconds
+Time taken: 0.091 seconds
 OK
-Time taken: 0.077 seconds
+Time taken: 0.071 seconds
 ======= q08_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:51:10 1517197870
-Stop  timestamp: 2018/01/28:21:53:37 1517198017
-Duration:  0h 2m 27s
+Start timestamp: 2018/02/12:11:28:10 1518456490
+Stop  timestamp: 2018/02/12:11:30:46 1518456646
+Duration:  0h 2m 36s
 q08_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -2658,7 +2641,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q08_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q08_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q09/q09.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q09/query09.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q09/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q09
@@ -2672,8 +2655,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q09_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q09_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q09_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q09/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -2728,9 +2709,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.761 seconds
+Time taken: 0.093 seconds
 OK
-Time taken: 0.53 seconds
+Time taken: 0.468 seconds
 No Stats for bigbench@store_sales, Columns: ss_cdemo_sk, ss_net_profit, ss_addr_sk, ss_sold_date_sk, ss_store_sk, ss_quantity, ss_sales_price
 No Stats for bigbench@date_dim, Columns: d_date_sk, d_year
 No Stats for bigbench@customer_address, Columns: ca_state, ca_address_sk, ca_country
@@ -2778,14 +2759,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_2:ca1 
           TableScan
             alias: ca1
-            Statistics: Num rows: 49500 Data size: 55798875 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 49500 Data size: 55831875 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((ca_country = 'United States') and ca_address_sk is not null) (type: boolean)
-              Statistics: Num rows: 24750 Data size: 27899437 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 24750 Data size: 27915937 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: ca_address_sk (type: bigint), ca_state (type: string)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 24750 Data size: 27899437 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 24750 Data size: 27915937 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -2793,14 +2774,14 @@ STAGE PLANS:
         $hdt$_1:s 
           TableScan
             alias: s
-            Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: s_store_sk is not null (type: boolean)
-              Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: s_store_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col3 (type: bigint)
@@ -2916,10 +2897,10 @@ STAGE PLANS:
   Stage: Stage-6
     Stats-Aggr Operator
 
-Time taken: 2.999 seconds, Fetched: 179 row(s)
+Time taken: 3.407 seconds, Fetched: 179 row(s)
 ======= q09_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:53:56 1517198036
-Stop  timestamp: 2018/01/28:21:54:13 1517198053
+Start timestamp: 2018/02/12:11:31:05 1518456665
+Stop  timestamp: 2018/02/12:11:31:22 1518456682
 Duration:  0h 0m 17s
 q09_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
@@ -2929,7 +2910,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q09_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q09_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q10/q10.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q10/query10.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q10/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q10
@@ -2943,9 +2924,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q10_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q10_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q10_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q10/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -3006,15 +2985,15 @@ Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF()
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF() done
 OK
-Time taken: 0.176 seconds
+Time taken: 0.173 seconds
 hive.exec.compress.output=false
 hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 1.861 seconds
+Time taken: 0.062 seconds
 OK
-Time taken: 0.527 seconds
+Time taken: 0.507 seconds
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF()
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF() done
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF()
@@ -3037,30 +3016,30 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: product_reviews
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Select Operator
               expressions: pr_item_sk (type: bigint), pr_review_content (type: string)
               outputColumnNames: _col0, _col1
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               UDTF Operator
-                Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
-                function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@28d7bd6b
+                Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
+                function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@6a7ea7c
                 Select Operator
                   expressions: item_sk (type: bigint), sentence (type: string), sentiment (type: string), sentiment_word (type: string)
                   outputColumnNames: _col0, _col1, _col2, _col3
-                  Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
                   Reduce Output Operator
                     key expressions: _col0 (type: bigint), _col1 (type: string), _col2 (type: string), _col3 (type: string)
                     sort order: ++++
-                    Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
       Reduce Operator Tree:
         Select Operator
           expressions: KEY.reducesinkkey0 (type: bigint), KEY.reducesinkkey1 (type: string), KEY.reducesinkkey2 (type: string), KEY.reducesinkkey3 (type: string)
           outputColumnNames: _col0, _col1, _col2, _col3
-          Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
           File Output Operator
             compressed: false
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             table:
                 input format: org.apache.hadoop.mapred.TextInputFormat
                 output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -3080,11 +3059,11 @@ STAGE PLANS:
   Stage: Stage-2
     Stats-Aggr Operator
 
-Time taken: 1.949 seconds, Fetched: 54 row(s)
+Time taken: 2.083 seconds, Fetched: 54 row(s)
 ======= q10_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:54:32 1517198072
-Stop  timestamp: 2018/01/28:21:54:49 1517198089
-Duration:  0h 0m 17s
+Start timestamp: 2018/02/12:11:31:40 1518456700
+Stop  timestamp: 2018/02/12:11:31:55 1518456715
+Duration:  0h 0m 15s
 q10_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -3093,7 +3072,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q10_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q10_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q11/q11.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q11/query11.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q11/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q11
@@ -3107,9 +3086,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q11_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q11_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q11_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q11/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -3163,9 +3140,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.904 seconds
+Time taken: 0.082 seconds
 OK
-Time taken: 0.529 seconds
+Time taken: 0.509 seconds
 No Stats for bigbench@product_reviews, Columns: pr_review_rating, pr_item_sk
 No Stats for bigbench@web_sales, Columns: ws_item_sk, ws_sold_date_sk, ws_net_paid
 No Stats for bigbench@date_dim, Columns: d_date, d_date_sk
@@ -3190,25 +3167,25 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: product_reviews
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: pr_item_sk is not null (type: boolean)
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: pr_item_sk (type: bigint), pr_review_rating (type: int)
                 outputColumnNames: pr_item_sk, pr_review_rating
-                Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
                 Group By Operator
                   aggregations: count(), avg(pr_review_rating)
                   keys: pr_item_sk (type: bigint)
                   mode: hash
                   outputColumnNames: _col0, _col1, _col2
-                  Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
                   Reduce Output Operator
                     key expressions: _col0 (type: bigint)
                     sort order: +
                     Map-reduce partition columns: _col0 (type: bigint)
-                    Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
                     value expressions: _col1 (type: bigint), _col2 (type: struct<count:bigint,sum:double,input:int>)
       Reduce Operator Tree:
         Group By Operator
@@ -3216,7 +3193,7 @@ STAGE PLANS:
           keys: KEY._col0 (type: bigint)
           mode: mergepartial
           outputColumnNames: _col0, _col1, _col2
-          Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
           File Output Operator
             compressed: false
             table:
@@ -3355,7 +3332,7 @@ STAGE PLANS:
               key expressions: _col0 (type: bigint)
               sort order: +
               Map-reduce partition columns: _col0 (type: bigint)
-              Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
               value expressions: _col1 (type: bigint), _col2 (type: double)
           TableScan
             Reduce Output Operator
@@ -3458,11 +3435,11 @@ STAGE PLANS:
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                 serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 3.156 seconds, Fetched: 288 row(s)
+Time taken: 3.177 seconds, Fetched: 288 row(s)
 ======= q11_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:55:08 1517198108
-Stop  timestamp: 2018/01/28:21:55:26 1517198126
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:32:14 1518456734
+Stop  timestamp: 2018/02/12:11:32:30 1518456750
+Duration:  0h 0m 16s
 q11_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -3471,7 +3448,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q11_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q11_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q12/q12.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q12/query12.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q12/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q12
@@ -3485,8 +3462,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q12_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q12_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q12_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q12/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -3544,9 +3519,9 @@ hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 1.898 seconds
+Time taken: 0.104 seconds
 OK
-Time taken: 0.488 seconds
+Time taken: 0.586 seconds
 No Stats for bigbench@web_clickstreams, Columns: wcs_click_date_sk, wcs_item_sk, wcs_user_sk, wcs_sales_sk
 No Stats for bigbench@item, Columns: i_category, i_item_sk
 No Stats for bigbench@store_sales, Columns: ss_customer_sk, ss_sold_date_sk, ss_item_sk
@@ -3579,14 +3554,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_1:item 
           TableScan
             alias: item
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((i_category) IN ('Books', 'Electronics') and i_item_sk is not null) (type: boolean)
-              Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -3835,14 +3810,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_2:item 
           TableScan
             alias: item
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((i_category) IN ('Books', 'Electronics') and i_item_sk is not null) (type: boolean)
-              Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col1 (type: bigint)
@@ -3882,11 +3857,11 @@ STAGE PLANS:
       Local Work:
         Map Reduce Local Work
 
-Time taken: 2.901 seconds, Fetched: 330 row(s)
+Time taken: 3.467 seconds, Fetched: 330 row(s)
 ======= q12_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:55:45 1517198145
-Stop  timestamp: 2018/01/28:21:56:03 1517198163
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:32:49 1518456769
+Stop  timestamp: 2018/02/12:11:33:06 1518456786
+Duration:  0h 0m 17s
 q12_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -3895,7 +3870,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q12_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q12_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q13/q13.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q13/query13.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q13/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q13
@@ -3909,9 +3884,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q13_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q13_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q13_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q13/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -3968,14 +3941,14 @@ Time taken: 0.075 seconds
 OK
 Time taken: 0.007 seconds
 OK
-Time taken: 1.983 seconds
+Time taken: 2.156 seconds
 OK
-Time taken: 0.254 seconds
+Time taken: 0.258 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.562 seconds
+Time taken: 0.009 seconds
 OK
-Time taken: 0.291 seconds
+Time taken: 0.146 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-20 is a root stage
@@ -4093,10 +4066,10 @@ STAGE PLANS:
         c 
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 _col0 (type: bigint)
@@ -4197,10 +4170,10 @@ STAGE PLANS:
         c 
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 _col0 (type: bigint)
@@ -4267,10 +4240,10 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Map Join Operator
                 condition map:
                      Inner Join 0 to 1
@@ -4316,15 +4289,15 @@ STAGE PLANS:
               value expressions: _col1 (type: decimal(22,2)), _col2 (type: decimal(22,2))
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: c_customer_sk is not null (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Reduce Output Operator
                 key expressions: c_customer_sk (type: bigint)
                 sort order: +
                 Map-reduce partition columns: c_customer_sk (type: bigint)
-                Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
                 value expressions: c_first_name (type: string), c_last_name (type: string)
       Reduce Operator Tree:
         Join Operator
@@ -4426,14 +4399,14 @@ STAGE PLANS:
                   output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                   serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 1.265 seconds, Fetched: 449 row(s)
+Time taken: 1.336 seconds, Fetched: 449 row(s)
 OK
-Time taken: 0.085 seconds
+Time taken: 1.593 seconds
 OK
-Time taken: 0.089 seconds
+Time taken: 0.095 seconds
 ======= q13_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:56:22 1517198182
-Stop  timestamp: 2018/01/28:21:56:41 1517198201
+Start timestamp: 2018/02/12:11:33:24 1518456804
+Stop  timestamp: 2018/02/12:11:33:43 1518456823
 Duration:  0h 0m 19s
 q13_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
@@ -4443,7 +4416,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q13_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q13_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q14/q14.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q14/query14.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q14/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q14
@@ -4457,8 +4430,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q14_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q14_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q14_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q14/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -4513,9 +4484,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.849 seconds
+Time taken: 0.089 seconds
 OK
-Time taken: 0.519 seconds
+Time taken: 0.431 seconds
 No Stats for bigbench@web_sales, Columns: ws_ship_hdemo_sk, ws_sold_time_sk, ws_web_page_sk
 No Stats for bigbench@household_demographics, Columns: hd_demo_sk, hd_dep_count
 No Stats for bigbench@time_dim, Columns: t_hour, t_time_sk
@@ -4589,14 +4560,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_3:wp 
           TableScan
             alias: wp
-            Statistics: Num rows: 60 Data size: 38760 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 60 Data size: 38735 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((wp_char_count >= 5000) and (wp_char_count <= 6000) and wp_web_page_sk is not null) (type: boolean)
-              Statistics: Num rows: 6 Data size: 3876 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 6 Data size: 3873 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: wp_web_page_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 6 Data size: 3876 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 6 Data size: 3873 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -4841,14 +4812,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_4:wp 
           TableScan
             alias: wp
-            Statistics: Num rows: 60 Data size: 38760 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 60 Data size: 38735 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((wp_char_count >= 5000) and (wp_char_count <= 6000) and wp_web_page_sk is not null) (type: boolean)
-              Statistics: Num rows: 6 Data size: 3876 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 6 Data size: 3873 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: wp_web_page_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 6 Data size: 3876 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 6 Data size: 3873 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -4914,11 +4885,11 @@ STAGE PLANS:
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                 serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 3.202 seconds, Fetched: 386 row(s)
+Time taken: 3.569 seconds, Fetched: 386 row(s)
 ======= q14_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:57:00 1517198220
-Stop  timestamp: 2018/01/28:21:57:18 1517198238
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:34:02 1518456842
+Stop  timestamp: 2018/02/12:11:34:18 1518456858
+Duration:  0h 0m 16s
 q14_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -4927,7 +4898,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q14_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q14_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q15/q15.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q15/query15.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q15/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q15
@@ -4941,8 +4912,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q15_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q15_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q15_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q15/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -4997,9 +4966,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.959 seconds
+Time taken: 0.062 seconds
 OK
-Time taken: 0.566 seconds
+Time taken: 0.493 seconds
 No Stats for bigbench@store_sales, Columns: ss_net_paid, ss_sold_date_sk, ss_item_sk, ss_store_sk
 No Stats for bigbench@date_dim, Columns: d_date, d_date_sk
 No Stats for bigbench@item, Columns: i_category_id, i_item_sk
@@ -5045,14 +5014,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_0:$hdt$_2:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (i_item_sk is not null and i_category_id is not null) (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint), i_category_id (type: int)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col1 (type: bigint)
@@ -5172,11 +5141,11 @@ STAGE PLANS:
   Stage: Stage-5
     Stats-Aggr Operator
 
-Time taken: 2.589 seconds, Fetched: 168 row(s)
+Time taken: 2.977 seconds, Fetched: 168 row(s)
 ======= q15_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:57:37 1517198257
-Stop  timestamp: 2018/01/28:21:57:55 1517198275
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:34:37 1518456877
+Stop  timestamp: 2018/02/12:11:34:52 1518456892
+Duration:  0h 0m 15s
 q15_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -5185,7 +5154,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q15_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q15_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q16/q16.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q16/query16.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q16/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q16
@@ -5199,8 +5168,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q16_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q16_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q16_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q16/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -5255,9 +5222,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.929 seconds
+Time taken: 0.086 seconds
 OK
-Time taken: 0.572 seconds
+Time taken: 0.5 seconds
 No Stats for bigbench@web_sales, Columns: ws_warehouse_sk, ws_order_number, ws_item_sk, ws_sold_date_sk, ws_sales_price
 No Stats for bigbench@web_returns, Columns: wr_order_number, wr_refunded_cash, wr_item_sk
 No Stats for bigbench@item, Columns: i_item_id, i_item_sk
@@ -5306,14 +5273,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_1:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: i_item_sk is not null (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint), i_item_id (type: string)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col1 (type: bigint)
@@ -5321,14 +5288,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_2:w 
           TableScan
             alias: w
-            Statistics: Num rows: 5 Data size: 5698 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 5 Data size: 5695 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: w_warehouse_sk is not null (type: boolean)
-              Statistics: Num rows: 5 Data size: 5698 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 5 Data size: 5695 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: w_warehouse_sk (type: bigint), w_state (type: string)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 5 Data size: 5698 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 5 Data size: 5695 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -5475,11 +5442,11 @@ STAGE PLANS:
   Stage: Stage-7
     Stats-Aggr Operator
 
-Time taken: 2.838 seconds, Fetched: 211 row(s)
+Time taken: 3.259 seconds, Fetched: 211 row(s)
 ======= q16_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:58:14 1517198294
-Stop  timestamp: 2018/01/28:21:58:32 1517198312
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:35:11 1518456911
+Stop  timestamp: 2018/02/12:11:35:28 1518456928
+Duration:  0h 0m 17s
 q16_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -5488,7 +5455,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q16_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q16_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q17/q17.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q17/query17.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q17/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q17
@@ -5502,9 +5469,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q17_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q17_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q17_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q17/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -5558,9 +5523,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.962 seconds
+Time taken: 0.088 seconds
 OK
-Time taken: 0.448 seconds
+Time taken: 0.527 seconds
 No Stats for bigbench@store_sales, Columns: ss_customer_sk, ss_promo_sk, ss_ext_sales_price, ss_sold_date_sk, ss_item_sk, ss_store_sk
 No Stats for bigbench@date_dim, Columns: d_moy, d_date_sk, d_year
 No Stats for bigbench@item, Columns: i_category, i_item_sk
@@ -5635,14 +5600,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_2:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((i_category) IN ('Books', 'Music') and i_item_sk is not null) (type: boolean)
-              Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col1 (type: bigint)
@@ -5650,14 +5615,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_3:s 
           TableScan
             alias: s
-            Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((s_gmt_offset = -5) and s_store_sk is not null) (type: boolean)
-              Statistics: Num rows: 6 Data size: 12984 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 6 Data size: 12979 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: s_store_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 6 Data size: 12984 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 6 Data size: 12979 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col3 (type: bigint)
@@ -5665,14 +5630,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_4:p 
           TableScan
             alias: p
-            Statistics: Num rows: 300 Data size: 404700 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 300 Data size: 404750 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (((p_channel_dmail = 'Y') or (p_channel_email = 'Y') or (p_channel_tv = 'Y')) and p_promo_sk is not null) (type: boolean)
-              Statistics: Num rows: 300 Data size: 404700 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 300 Data size: 404750 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: p_promo_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 300 Data size: 404700 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 300 Data size: 404750 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col4 (type: bigint)
@@ -5680,14 +5645,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_5:c 
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (c_customer_sk is not null and c_current_addr_sk is not null) (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: c_customer_sk (type: bigint), c_current_addr_sk (type: bigint)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -5695,14 +5660,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_6:ca 
           TableScan
             alias: ca
-            Statistics: Num rows: 49500 Data size: 55798875 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 49500 Data size: 55831875 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((ca_gmt_offset = -5) and ca_address_sk is not null) (type: boolean)
-              Statistics: Num rows: 24750 Data size: 27899437 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 24750 Data size: 27915937 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: ca_address_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 24750 Data size: 27899437 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 24750 Data size: 27915937 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col18 (type: bigint)
@@ -5991,14 +5956,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_3:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((i_category) IN ('Books', 'Music') and i_item_sk is not null) (type: boolean)
-              Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col1 (type: bigint)
@@ -6006,14 +5971,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_4:s 
           TableScan
             alias: s
-            Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((s_gmt_offset = -5) and s_store_sk is not null) (type: boolean)
-              Statistics: Num rows: 6 Data size: 12984 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 6 Data size: 12979 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: s_store_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 6 Data size: 12984 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 6 Data size: 12979 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col3 (type: bigint)
@@ -6021,14 +5986,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_5:p 
           TableScan
             alias: p
-            Statistics: Num rows: 300 Data size: 404700 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 300 Data size: 404750 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: p_promo_sk is not null (type: boolean)
-              Statistics: Num rows: 300 Data size: 404700 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 300 Data size: 404750 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: p_promo_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 300 Data size: 404700 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 300 Data size: 404750 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col4 (type: bigint)
@@ -6036,14 +6001,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_6:c 
           TableScan
             alias: c
-            Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (c_customer_sk is not null and c_current_addr_sk is not null) (type: boolean)
-              Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: c_customer_sk (type: bigint), c_current_addr_sk (type: bigint)
                 outputColumnNames: _col0, _col1
-                Statistics: Num rows: 99000 Data size: 88034562 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 99000 Data size: 88009812 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col2 (type: bigint)
@@ -6051,14 +6016,14 @@ STAGE PLANS:
         $hdt$_1:$hdt$_7:ca 
           TableScan
             alias: ca
-            Statistics: Num rows: 49500 Data size: 55798875 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 49500 Data size: 55831875 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: ((ca_gmt_offset = -5) and ca_address_sk is not null) (type: boolean)
-              Statistics: Num rows: 24750 Data size: 27899437 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 24750 Data size: 27915937 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: ca_address_sk (type: bigint)
                 outputColumnNames: _col0
-                Statistics: Num rows: 24750 Data size: 27899437 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 24750 Data size: 27915937 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col15 (type: bigint)
@@ -6149,11 +6114,11 @@ STAGE PLANS:
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                 serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 4.347 seconds, Fetched: 570 row(s)
+Time taken: 4.646 seconds, Fetched: 570 row(s)
 ======= q17_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:58:51 1517198331
-Stop  timestamp: 2018/01/28:21:59:10 1517198350
-Duration:  0h 0m 19s
+Start timestamp: 2018/02/12:11:35:46 1518456946
+Stop  timestamp: 2018/02/12:11:36:04 1518456964
+Duration:  0h 0m 18s
 q17_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -6162,7 +6127,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q17_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q17_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q18/q18.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q18/query18.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q18/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q18
@@ -6176,8 +6141,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q18_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q18_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q18_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q18/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -6239,9 +6202,9 @@ Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/
 new io.bigdatabenchmark.v1.queries.q18.NegativeSentimentUDF()
 new io.bigdatabenchmark.v1.queries.q18.NegativeSentimentUDF() done
 OK
-Time taken: 0.166 seconds
+Time taken: 0.231 seconds
 OK
-Time taken: 0.063 seconds
+Time taken: 0.099 seconds
 NoViableAltException(350@[()* loopback of 430:20: ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*])
 	at org.antlr.runtime.DFA.noViableAlt(DFA.java:158)
 	at org.antlr.runtime.DFA.predict(DFA.java:116)
@@ -6302,9 +6265,9 @@ runEngineCmd -f /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/qu
 ==========
 Please check the log files for details
 ======= q18_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:21:59:29 1517198369
-Stop  timestamp: 2018/01/28:21:59:42 1517198382
-Duration:  0h 0m 13s
+Start timestamp: 2018/02/12:11:36:23 1518456983
+Stop  timestamp: 2018/02/12:11:36:35 1518456995
+Duration:  0h 0m 12s
 q18_hive_run_query_0 FAILED exit code: 64 
 ----- result -----
 EMPTY  bytes: 0
@@ -6318,7 +6281,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q19/q19.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q19/query19.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q19/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q19
@@ -6332,8 +6295,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q19_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q19_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q19_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q19/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -6395,15 +6356,15 @@ Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF()
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF() done
 OK
-Time taken: 0.166 seconds
+Time taken: 0.168 seconds
 hive.exec.compress.output=false
 hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 2.007 seconds
+Time taken: 0.071 seconds
 OK
-Time taken: 0.472 seconds
+Time taken: 0.506 seconds
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF()
 initialize io.bigdatabenchmark.v1.queries.q10.SentimentUDF() done
 initialize() io.bigdatabenchmark.v1.queries.q10.SentimentUDF
@@ -6569,10 +6530,10 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: pr
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: pr_item_sk is not null (type: boolean)
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               Map Join Operator
                 condition map:
                      Inner Join 0 to 1
@@ -6582,24 +6543,24 @@ STAGE PLANS:
                   1 _col0 (type: bigint)
                   2 _col0 (type: bigint)
                 outputColumnNames: _col4, _col7, _col11, _col12, _col13, _col14
-                Statistics: Num rows: 197980 Data size: 175212474 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 197980 Data size: 175080498 Basic stats: COMPLETE Column stats: NONE
                 Filter Operator
                   predicate: ((abs(((_col12 - _col14) / ((_col12 + _col14) / 2))) <= 0.1) and (_col4 = _col11) and (_col11 = _col13)) (type: boolean)
-                  Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
                   Select Operator
                     expressions: _col4 (type: bigint), _col7 (type: string)
                     outputColumnNames: _col0, _col1
-                    Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
                     UDTF Operator
-                      Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
-                      function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@7a491a60
+                      Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
+                      function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@13346a64
                       Filter Operator
                         predicate: (sentiment = 'NEG') (type: boolean)
-                        Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                        Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                         Select Operator
                           expressions: item_sk (type: bigint), sentence (type: string), sentiment_word (type: string)
                           outputColumnNames: _col0, _col1, _col3
-                          Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                          Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                           File Output Operator
                             compressed: false
                             table:
@@ -6616,15 +6577,15 @@ STAGE PLANS:
             Reduce Output Operator
               key expressions: _col0 (type: bigint), _col1 (type: string), 'NEG' (type: string), _col3 (type: string)
               sort order: ++++
-              Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
       Reduce Operator Tree:
         Select Operator
           expressions: KEY.reducesinkkey0 (type: bigint), KEY.reducesinkkey1 (type: string), 'NEG' (type: string), KEY.reducesinkkey3 (type: string)
           outputColumnNames: _col0, _col1, _col2, _col3
-          Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
           File Output Operator
             compressed: false
-            Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
             table:
                 input format: org.apache.hadoop.mapred.TextInputFormat
                 output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -6664,10 +6625,10 @@ STAGE PLANS:
         extractedsentiments:pr 
           TableScan
             alias: pr
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: pr_item_sk is not null (type: boolean)
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 pr_item_sk (type: bigint)
@@ -6687,24 +6648,24 @@ STAGE PLANS:
                 1 _col0 (type: bigint)
                 2 _col0 (type: bigint)
               outputColumnNames: _col4, _col7, _col11, _col12, _col13, _col14
-              Statistics: Num rows: 197980 Data size: 175212474 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 197980 Data size: 175080498 Basic stats: COMPLETE Column stats: NONE
               Filter Operator
                 predicate: ((abs(((_col12 - _col14) / ((_col12 + _col14) / 2))) <= 0.1) and (_col4 = _col11) and (_col11 = _col13)) (type: boolean)
-                Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
                 Select Operator
                   expressions: _col4 (type: bigint), _col7 (type: string)
                   outputColumnNames: _col0, _col1
-                  Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
                   UDTF Operator
-                    Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
-                    function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@3398ed12
+                    Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
+                    function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@2e96489b
                     Filter Operator
                       predicate: (sentiment = 'NEG') (type: boolean)
-                      Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                      Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                       Select Operator
                         expressions: item_sk (type: bigint), sentence (type: string), sentiment_word (type: string)
                         outputColumnNames: _col0, _col1, _col3
-                        Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                        Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                         File Output Operator
                           compressed: false
                           table:
@@ -6734,10 +6695,10 @@ STAGE PLANS:
         extractedsentiments:pr 
           TableScan
             alias: pr
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: pr_item_sk is not null (type: boolean)
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 pr_item_sk (type: bigint)
@@ -6757,24 +6718,24 @@ STAGE PLANS:
                 1 _col0 (type: bigint)
                 2 _col0 (type: bigint)
               outputColumnNames: _col4, _col7, _col11, _col12, _col13, _col14
-              Statistics: Num rows: 197980 Data size: 175212474 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 197980 Data size: 175080498 Basic stats: COMPLETE Column stats: NONE
               Filter Operator
                 predicate: ((abs(((_col12 - _col14) / ((_col12 + _col14) / 2))) <= 0.1) and (_col4 = _col11) and (_col11 = _col13)) (type: boolean)
-                Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
                 Select Operator
                   expressions: _col4 (type: bigint), _col7 (type: string)
                   outputColumnNames: _col0, _col1
-                  Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
                   UDTF Operator
-                    Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
-                    function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@c555e1e
+                    Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
+                    function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@56ed2baf
                     Filter Operator
                       predicate: (sentiment = 'NEG') (type: boolean)
-                      Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                      Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                       Select Operator
                         expressions: item_sk (type: bigint), sentence (type: string), sentiment_word (type: string)
                         outputColumnNames: _col0, _col1, _col3
-                        Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                        Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                         File Output Operator
                           compressed: false
                           table:
@@ -6803,15 +6764,15 @@ STAGE PLANS:
               value expressions: _col1 (type: bigint)
           TableScan
             alias: pr
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: pr_item_sk is not null (type: boolean)
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               Reduce Output Operator
                 key expressions: pr_item_sk (type: bigint)
                 sort order: +
                 Map-reduce partition columns: pr_item_sk (type: bigint)
-                Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
                 value expressions: pr_review_content (type: string)
       Reduce Operator Tree:
         Join Operator
@@ -6823,24 +6784,24 @@ STAGE PLANS:
             1 _col0 (type: bigint)
             2 _col0 (type: bigint)
           outputColumnNames: _col4, _col7, _col11, _col12, _col13, _col14
-          Statistics: Num rows: 197980 Data size: 175212474 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 197980 Data size: 175080498 Basic stats: COMPLETE Column stats: NONE
           Filter Operator
             predicate: ((abs(((_col12 - _col14) / ((_col12 + _col14) / 2))) <= 0.1) and (_col4 = _col11) and (_col11 = _col13)) (type: boolean)
-            Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
             Select Operator
               expressions: _col4 (type: bigint), _col7 (type: string)
               outputColumnNames: _col0, _col1
-              Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
               UDTF Operator
-                Statistics: Num rows: 16498 Data size: 14600744 Basic stats: COMPLETE Column stats: NONE
-                function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@6e5fba90
+                Statistics: Num rows: 16498 Data size: 14589746 Basic stats: COMPLETE Column stats: NONE
+                function name: io.bigdatabenchmark.v1.queries.q10.SentimentUDF@4e4c05a0
                 Filter Operator
                   predicate: (sentiment = 'NEG') (type: boolean)
-                  Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                   Select Operator
                     expressions: item_sk (type: bigint), sentence (type: string), sentiment_word (type: string)
                     outputColumnNames: _col0, _col1, _col3
-                    Statistics: Num rows: 8249 Data size: 7300372 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 8249 Data size: 7294873 Basic stats: COMPLETE Column stats: NONE
                     File Output Operator
                       compressed: false
                       table:
@@ -6951,11 +6912,11 @@ STAGE PLANS:
                   output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                   serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 3.174 seconds, Fetched: 536 row(s)
+Time taken: 3.183 seconds, Fetched: 536 row(s)
 ======= q19_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:00:01 1517198401
-Stop  timestamp: 2018/01/28:22:00:19 1517198419
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:36:54 1518457014
+Stop  timestamp: 2018/02/12:11:37:10 1518457030
+Duration:  0h 0m 16s
 q19_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -6964,7 +6925,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q19_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q19_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q20/q20.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q20/query20.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q20/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q20
@@ -6978,9 +6939,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q20_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q20_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q20_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 =========================
 q20 Step 1/3: Executing hive queries
 tmp output: /user/wentingt/benchmarks/bigbench/temp/q20_hive_run_query_0_temp
@@ -7040,9 +6999,9 @@ hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 2.038 seconds
+Time taken: 0.092 seconds
 OK
-Time taken: 0.561 seconds
+Time taken: 0.73 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-1 is a root stage
@@ -7243,7 +7202,7 @@ STAGE PLANS:
                 output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                 serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 2.671 seconds, Fetched: 199 row(s)
+Time taken: 2.727 seconds, Fetched: 199 row(s)
 =========================
 q20 Step 2/3: Calculating KMeans with spark
 intput: --fromHiveMetastore true --input bigbench.q20_hive_run_query_0_temp
@@ -7257,9 +7216,9 @@ spark-submit --class io.bigdatabenchmark.v1.queries.KMeansClustering /users/went
 ==========
 Please check the log files for details
 ======= q20_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:00:38 1517198438
-Stop  timestamp: 2018/01/28:22:00:56 1517198456
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:37:29 1518457049
+Stop  timestamp: 2018/02/12:11:37:45 1518457065
+Duration:  0h 0m 16s
 q20_hive_run_query_0 FAILED exit code: 127 
 ----- result -----
 EMPTY  bytes: 0
@@ -7273,7 +7232,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q21/q21.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q21/query21.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q21/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q21
@@ -7287,8 +7246,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q21_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q21_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q21_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q21/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -7343,9 +7300,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.971 seconds
+Time taken: 0.078 seconds
 OK
-Time taken: 0.463 seconds
+Time taken: 0.502 seconds
 No Stats for bigbench@store_returns, Columns: sr_returned_date_sk, sr_ticket_number, sr_item_sk, sr_return_quantity, sr_customer_sk
 No Stats for bigbench@date_dim, Columns: d_moy, d_date_sk, d_year
 No Stats for bigbench@web_sales, Columns: ws_item_sk, ws_quantity, ws_sold_date_sk, ws_bill_customer_sk
@@ -7527,14 +7484,14 @@ STAGE PLANS:
         $hdt$_3:part_s 
           TableScan
             alias: part_s
-            Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: s_store_sk is not null (type: boolean)
-              Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: s_store_sk (type: bigint), s_store_id (type: string), s_store_name (type: string)
                 outputColumnNames: _col0, _col1, _col2
-                Statistics: Num rows: 12 Data size: 25968 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 12 Data size: 25958 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col8 (type: bigint)
@@ -7542,14 +7499,14 @@ STAGE PLANS:
         $hdt$_4:part_i 
           TableScan
             alias: part_i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: i_item_sk is not null (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint), i_item_id (type: string), i_item_desc (type: string)
                 outputColumnNames: _col0, _col1, _col2
-                Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col7 (type: bigint)
@@ -7898,11 +7855,11 @@ STAGE PLANS:
       Local Work:
         Map Reduce Local Work
 
-Time taken: 3.584 seconds, Fetched: 543 row(s)
+Time taken: 3.98 seconds, Fetched: 543 row(s)
 ======= q21_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:01:15 1517198475
-Stop  timestamp: 2018/01/28:22:01:34 1517198494
-Duration:  0h 0m 19s
+Start timestamp: 2018/02/12:11:38:04 1518457084
+Stop  timestamp: 2018/02/12:11:38:21 1518457101
+Duration:  0h 0m 17s
 q21_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -7911,7 +7868,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q21_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q21_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q22/q22.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q22/query22.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q22/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q22
@@ -7925,9 +7882,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q22_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q22_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q22_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q22/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -7981,9 +7936,9 @@ hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 hive.exec.compress.output=false
 OK
-Time taken: 1.846 seconds
+Time taken: 0.069 seconds
 OK
-Time taken: 0.508 seconds
+Time taken: 0.476 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-13 is a root stage
@@ -8020,10 +7975,10 @@ STAGE PLANS:
         i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (i_item_sk is not null and i_current_price BETWEEN 0.98 AND 1.5) (type: boolean)
-              Statistics: Num rows: 1980 Data size: 3470936 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 1980 Data size: 3470606 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 inv_item_sk (type: bigint)
@@ -8031,10 +7986,10 @@ STAGE PLANS:
         w 
           TableScan
             alias: w
-            Statistics: Num rows: 5 Data size: 5698 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 5 Data size: 5695 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: w_warehouse_sk is not null (type: boolean)
-              Statistics: Num rows: 5 Data size: 5698 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 5 Data size: 5695 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 _col2 (type: bigint)
@@ -8151,11 +8106,11 @@ STAGE PLANS:
   Stage: Stage-6
     Stats-Aggr Operator
 
-Time taken: 1.754 seconds, Fetched: 166 row(s)
+Time taken: 2.299 seconds, Fetched: 166 row(s)
 ======= q22_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:01:53 1517198513
-Stop  timestamp: 2018/01/28:22:02:10 1517198530
-Duration:  0h 0m 17s
+Start timestamp: 2018/02/12:11:38:39 1518457119
+Stop  timestamp: 2018/02/12:11:38:54 1518457134
+Duration:  0h 0m 15s
 q22_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -8164,7 +8119,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q22_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q22_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q23/q23.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q23/query23.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q23/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q23
@@ -8178,9 +8133,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q23_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q23_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q23_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 16s
+Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q23/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -8233,7 +8186,7 @@ bigbench.hive.optimize.sampling.orderby.percent=0.1
 hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 OK
-Time taken: 0.095 seconds
+Time taken: 0.106 seconds
 NoViableAltException(350@[319:1: constant : ( ( intervalLiteral )=> intervalLiteral | Number | dateLiteral | timestampLiteral | StringLiteral | stringLiteralSequence | IntegralLiteral | NumberLiteral | charSetStringLiteral | booleanValue | KW_NULL -> TOK_NULL );])
 	at org.antlr.runtime.DFA.noViableAlt(DFA.java:158)
 	at org.antlr.runtime.DFA.predict(DFA.java:116)
@@ -8297,8 +8250,8 @@ runEngineCmd -f /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/qu
 ==========
 Please check the log files for details
 ======= q23_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:02:28 1517198548
-Stop  timestamp: 2018/01/28:22:02:41 1517198561
+Start timestamp: 2018/02/12:11:39:13 1518457153
+Stop  timestamp: 2018/02/12:11:39:26 1518457166
 Duration:  0h 0m 13s
 q23_hive_run_query_0 FAILED exit code: 64 
 ----- result -----
@@ -8313,7 +8266,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q24/q24.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q24/query24.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q24/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q24
@@ -8327,9 +8280,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q24_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q24_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q24_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q24/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -8382,20 +8333,20 @@ bigbench.hive.optimize.sampling.orderby.percent=0.1
 hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 OK
-Time taken: 0.081 seconds
+Time taken: 0.102 seconds
 Warning: Map Join MAPJOIN[17][bigTable=?] in task 'Stage-2:MAPRED' is a cross product
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128210311_4e2f373e-a19e-4aee-a878-4523e280cacb
+Query ID = wentingt_20180212103956_52d19ce3-ff98-4672-aa02-d2e07ce1d21e
 Total jobs = 1
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-2018-01-28 21:03:20	Starting to launch local task to process map join;	maximum memory = 477626368
-2018-01-28 21:03:22	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/wentingt/c733a422-9a08-4dc0-90a3-a5e2ccd00d34/hive_2018-01-28_21-03-11_786_4933759744499492967-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile01--.hashtable
-2018-01-28 21:03:22	Uploaded 1 File to: file:/tmp/wentingt/c733a422-9a08-4dc0-90a3-a5e2ccd00d34/hive_2018-01-28_21-03-11_786_4933759744499492967-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile01--.hashtable (363 bytes)
-2018-01-28 21:03:22	End of local task; Time Taken: 2.244 sec.
+2018-02-12 10:40:05	Starting to launch local task to process map join;	maximum memory = 477626368
+2018-02-12 10:40:07	Dump the side-table for tag: 1 with group count: 1 into file: file:/tmp/wentingt/c7b6d55a-28b5-43db-9084-35a74507f840/hive_2018-02-12_10-39-56_838_8745449729940162574-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile01--.hashtable
+2018-02-12 10:40:07	Uploaded 1 File to: file:/tmp/wentingt/c7b6d55a-28b5-43db-9084-35a74507f840/hive_2018-02-12_10-39-56_838_8745449729940162574-1/-local-10005/HashTable-Stage-2/MapJoin-mapfile01--.hashtable (363 bytes)
+2018-02-12 10:40:07	End of local task; Time Taken: 2.221 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 1 out of 1
@@ -8406,25 +8357,25 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1517178164277_0088, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0088/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0088
+Starting Job = job_1518452786757_0091, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0091/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0091
 Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-2018-01-28 21:03:38,060 Stage-2 map = 0%,  reduce = 0%
-2018-01-28 21:03:46,428 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 5.99 sec
-2018-01-28 21:03:53,699 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 11.15 sec
-MapReduce Total cumulative CPU time: 11 seconds 150 msec
-Ended Job = job_1517178164277_0088
+2018-02-12 10:40:26,752 Stage-2 map = 0%,  reduce = 0%
+2018-02-12 10:40:34,069 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 6.73 sec
+2018-02-12 10:40:41,305 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 12.29 sec
+MapReduce Total cumulative CPU time: 12 seconds 290 msec
+Ended Job = job_1518452786757_0091
 Moving data to directory hdfs://dc1master:9000/user/hive/warehouse/bigbench.db/q24_hive_run_query_0_temp
 MapReduce Jobs Launched: 
-Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 11.15 sec   HDFS Read: 72834 HDFS Write: 267 SUCCESS
-Total MapReduce CPU Time Spent: 11 seconds 150 msec
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 12.29 sec   HDFS Read: 72823 HDFS Write: 267 SUCCESS
+Total MapReduce CPU Time Spent: 12 seconds 290 msec
 OK
-Time taken: 43.903 seconds
+Time taken: 46.502 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.57 seconds
+Time taken: 0.011 seconds
 OK
-Time taken: 0.324 seconds
+Time taken: 0.073 seconds
 No Stats for bigbench@web_sales, Columns: ws_item_sk, ws_quantity, ws_sold_date_sk
 No Stats for bigbench@q24_hive_run_query_0_temp, Columns: price_change, imp_start_date, imp_sk, no_days_comp_price, i_item_sk
 No Stats for bigbench@store_sales, Columns: ss_sold_date_sk, ss_item_sk, ss_quantity
@@ -8781,13 +8732,13 @@ STAGE PLANS:
                   output format: org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat
                   serde: org.apache.hadoop.hive.serde2.lazybinary.LazyBinarySerDe
 
-Time taken: 1.129 seconds, Fetched: 351 row(s)
+Time taken: 1.32 seconds, Fetched: 351 row(s)
 OK
-Time taken: 0.115 seconds
+Time taken: 1.527 seconds
 ======= q24_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:03:00 1517198580
-Stop  timestamp: 2018/01/28:22:03:58 1517198638
-Duration:  0h 0m 58s
+Start timestamp: 2018/02/12:11:39:44 1518457184
+Stop  timestamp: 2018/02/12:11:40:46 1518457246
+Duration:  0h 1m 2s
 q24_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -8796,7 +8747,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q24_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q24_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q25/q25.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q25/query25.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q25/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q25
@@ -8810,9 +8761,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q25_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q25_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q25_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 16s
+Duration for hdfs prepare:  0h 0m 17s
 =========================
 q25 Step 1/5: Executing hive queries
 tmp output: /user/wentingt/benchmarks/bigbench/temp/q25_hive_run_query_0_temp/q25_hive_run_query_0_temp_result
@@ -8869,21 +8818,21 @@ bigbench.hive.optimize.sampling.orderby.percent=0.1
 hive.groupby.skewindata=false
 hive.exec.submit.local.task.via.child=true
 OK
-Time taken: 0.087 seconds
+Time taken: 0.085 seconds
 OK
-Time taken: 0.705 seconds
+Time taken: 0.69 seconds
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128210430_d5752bfa-6fd6-4369-9748-f1e8155e1cc3
+Query ID = wentingt_20180212104118_f2845c16-a81b-4959-8392-bcc4235b7615
 Total jobs = 1
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-2018-01-28 21:04:39	Starting to launch local task to process map join;	maximum memory = 477626368
-2018-01-28 21:04:41	Dump the side-table for tag: 1 with group count: 72316 into file: file:/tmp/wentingt/2d307804-27b5-4ad0-aba9-c311e4150300/hive_2018-01-28_21-04-30_916_1530272296578615816-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile01--.hashtable
-2018-01-28 21:04:41	Uploaded 1 File to: file:/tmp/wentingt/2d307804-27b5-4ad0-aba9-c311e4150300/hive_2018-01-28_21-04-30_916_1530272296578615816-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile01--.hashtable (1497895 bytes)
-2018-01-28 21:04:41	End of local task; Time Taken: 2.381 sec.
+2018-02-12 10:41:26	Starting to launch local task to process map join;	maximum memory = 477626368
+2018-02-12 10:41:28	Dump the side-table for tag: 1 with group count: 72316 into file: file:/tmp/wentingt/6aa24e8c-2090-44a1-a524-54cfcd54bc25/hive_2018-02-12_10-41-18_093_5703323031031548749-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile01--.hashtable
+2018-02-12 10:41:28	Uploaded 1 File to: file:/tmp/wentingt/6aa24e8c-2090-44a1-a524-54cfcd54bc25/hive_2018-02-12_10-41-18_093_5703323031031548749-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile01--.hashtable (1497895 bytes)
+2018-02-12 10:41:28	End of local task; Time Taken: 2.169 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 1 out of 1
@@ -8894,32 +8843,32 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1517178164277_0089, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0089/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0089
+Starting Job = job_1518452786757_0092, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0092/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0092
 Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-2018-01-28 21:04:57,676 Stage-2 map = 0%,  reduce = 0%
-2018-01-28 21:05:06,019 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 13.25 sec
-2018-01-28 21:05:15,328 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 22.36 sec
-MapReduce Total cumulative CPU time: 22 seconds 360 msec
-Ended Job = job_1517178164277_0089
+2018-02-12 10:41:42,005 Stage-2 map = 0%,  reduce = 0%
+2018-02-12 10:41:51,397 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 13.5 sec
+2018-02-12 10:41:59,679 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 23.06 sec
+MapReduce Total cumulative CPU time: 23 seconds 60 msec
+Ended Job = job_1518452786757_0092
 Loading data to table bigbench.q25_hive_run_query_0_temp
 MapReduce Jobs Launched: 
-Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 22.36 sec   HDFS Read: 2513247 HDFS Write: 707610 SUCCESS
-Total MapReduce CPU Time Spent: 22 seconds 360 msec
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 23.06 sec   HDFS Read: 2514129 HDFS Write: 707610 SUCCESS
+Total MapReduce CPU Time Spent: 23 seconds 60 msec
 OK
-Time taken: 46.108 seconds
+Time taken: 43.278 seconds
 WARNING: Hive-on-MR is deprecated in Hive 2 and may not be available in the future versions. Consider using a different execution engine (i.e. spark, tez) or using Hive 1.X releases.
-Query ID = wentingt_20180128210517_e59a7b9c-f94a-4033-932d-da7e459eb8cd
+Query ID = wentingt_20180212104201_11d91414-f21b-4484-9cdd-fd2897d91e14
 Total jobs = 1
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.apache.logging.slf4j.Log4jLoggerFactory]
-2018-01-28 21:05:23	Starting to launch local task to process map join;	maximum memory = 477626368
-2018-01-28 21:05:25	Dump the side-table for tag: 1 with group count: 72316 into file: file:/tmp/wentingt/2d307804-27b5-4ad0-aba9-c311e4150300/hive_2018-01-28_21-05-17_037_7071852860915315038-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile11--.hashtable
-2018-01-28 21:05:25	Uploaded 1 File to: file:/tmp/wentingt/2d307804-27b5-4ad0-aba9-c311e4150300/hive_2018-01-28_21-05-17_037_7071852860915315038-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile11--.hashtable (1497895 bytes)
-2018-01-28 21:05:25	End of local task; Time Taken: 2.315 sec.
+2018-02-12 10:42:07	Starting to launch local task to process map join;	maximum memory = 477626368
+2018-02-12 10:42:09	Dump the side-table for tag: 1 with group count: 72316 into file: file:/tmp/wentingt/6aa24e8c-2090-44a1-a524-54cfcd54bc25/hive_2018-02-12_10-42-01_384_7625961713708003378-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile11--.hashtable
+2018-02-12 10:42:09	Uploaded 1 File to: file:/tmp/wentingt/6aa24e8c-2090-44a1-a524-54cfcd54bc25/hive_2018-02-12_10-42-01_384_7625961713708003378-1/-local-10003/HashTable-Stage-2/MapJoin-mapfile11--.hashtable (1497895 bytes)
+2018-02-12 10:42:09	End of local task; Time Taken: 2.4 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 1 out of 1
@@ -8930,28 +8879,27 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1517178164277_0090, Tracking URL = http://dc1master-lan1:8088/proxy/application_1517178164277_0090/
-Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1517178164277_0090
-Hadoop job information for Stage-2: number of mappers: 2; number of reducers: 1
-2018-01-28 21:05:40,664 Stage-2 map = 0%,  reduce = 0%
-2018-01-28 21:05:48,031 Stage-2 map = 50%,  reduce = 0%, Cumulative CPU 10.36 sec
-2018-01-28 21:05:49,065 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 22.84 sec
-2018-01-28 21:05:58,341 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 32.52 sec
-MapReduce Total cumulative CPU time: 32 seconds 520 msec
-Ended Job = job_1517178164277_0090
+Starting Job = job_1518452786757_0093, Tracking URL = http://dc1master-lan1:8088/proxy/application_1518452786757_0093/
+Kill Command = /users/wentingt/hadoop-3.0.0-beta1-src/hadoop-dist/target/hadoop-3.0.0-beta1/bin/hadoop job  -kill job_1518452786757_0093
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2018-02-12 10:42:21,220 Stage-2 map = 0%,  reduce = 0%
+2018-02-12 10:42:30,596 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 13.78 sec
+2018-02-12 10:42:37,822 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 23.68 sec
+MapReduce Total cumulative CPU time: 23 seconds 680 msec
+Ended Job = job_1518452786757_0093
 Loading data to table bigbench.q25_hive_run_query_0_temp
 MapReduce Jobs Launched: 
-Stage-Stage-2: Map: 2  Reduce: 1   Cumulative CPU: 32.52 sec   HDFS Read: 2584521 HDFS Write: 713165 SUCCESS
-Total MapReduce CPU Time Spent: 32 seconds 520 msec
+Stage-Stage-2: Map: 1  Reduce: 1   Cumulative CPU: 23.68 sec   HDFS Read: 2571608 HDFS Write: 713165 SUCCESS
+Total MapReduce CPU Time Spent: 23 seconds 680 msec
 OK
-Time taken: 43.747 seconds
+Time taken: 37.859 seconds
 hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 1.593 seconds
+Time taken: 0.01 seconds
 OK
-Time taken: 0.072 seconds
+Time taken: 0.079 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-1 is a root stage
@@ -9036,9 +8984,9 @@ STAGE PLANS:
   Stage: Stage-3
     Stats-Aggr Operator
 
-Time taken: 0.339 seconds, Fetched: 83 row(s)
+Time taken: 0.576 seconds, Fetched: 83 row(s)
 OK
-Time taken: 0.108 seconds
+Time taken: 1.435 seconds
 =========================
 q25 Step 2/3: Calculating KMeans with spark
 intput: --fromHiveMetastore true --input bigbench.q25_hive_run_query_0_temp_result
@@ -9052,9 +9000,9 @@ spark-submit --class io.bigdatabenchmark.v1.queries.KMeansClustering /users/went
 ==========
 Please check the log files for details
 ======= q25_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:04:17 1517198657
-Stop  timestamp: 2018/01/28:22:06:02 1517198762
-Duration:  0h 1m 45s
+Start timestamp: 2018/02/12:11:41:05 1518457265
+Stop  timestamp: 2018/02/12:11:42:41 1518457361
+Duration:  0h 1m 36s
 q25_hive_run_query_0 FAILED exit code: 127 
 ----- result -----
 EMPTY  bytes: 0
@@ -9068,7 +9016,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q26/q26.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q26/query26.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q26/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q26
@@ -9082,9 +9030,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q26_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q26_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q26_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 16s
+Duration for hdfs prepare:  0h 0m 17s
 =========================
 q26 Step 1/3: Executing hive queries
 tmp output: /user/wentingt/benchmarks/bigbench/temp/q26_hive_run_query_0_temp
@@ -9144,9 +9090,9 @@ hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 1.962 seconds
+Time taken: 0.071 seconds
 OK
-Time taken: 0.517 seconds
+Time taken: 0.703 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-7 is a root stage
@@ -9166,17 +9112,17 @@ STAGE PLANS:
         $hdt$_0:$hdt$_1:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: i_item_sk is not null (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint), i_class_id (type: int), i_category (type: string)
                 outputColumnNames: _col0, _col1, _col2
-                Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
                 Filter Operator
                   predicate: (_col2) IN ('Books') (type: boolean)
-                  Statistics: Num rows: 8910 Data size: 15619214 Basic stats: COMPLETE Column stats: NONE
+                  Statistics: Num rows: 8910 Data size: 15617729 Basic stats: COMPLETE Column stats: NONE
                   HashTable Sink Operator
                     keys:
                       0 _col0 (type: bigint)
@@ -9281,7 +9227,7 @@ STAGE PLANS:
   Stage: Stage-4
     Stats-Aggr Operator
 
-Time taken: 2.512 seconds, Fetched: 133 row(s)
+Time taken: 2.752 seconds, Fetched: 133 row(s)
 =========================
 q26 Step 2/3: Calculating KMeans with spark
 intput: --fromHiveMetastore true --input bigbench.q26_hive_run_query_0_temp
@@ -9295,9 +9241,9 @@ spark-submit --class io.bigdatabenchmark.v1.queries.KMeansClustering /users/went
 ==========
 Please check the log files for details
 ======= q26_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:06:21 1517198781
-Stop  timestamp: 2018/01/28:22:06:39 1517198799
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:43:00 1518457380
+Stop  timestamp: 2018/02/12:11:43:16 1518457396
+Duration:  0h 0m 16s
 q26_hive_run_query_0 FAILED exit code: 127 
 ----- result -----
 EMPTY  bytes: 0
@@ -9311,7 +9257,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q27/q27.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q27/query27.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q27/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q27
@@ -9325,8 +9271,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q27_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q27_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q27_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q27/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -9388,15 +9332,15 @@ Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/
 new io.bigdatabenchmark.v1.queries.q27.CompanyUDF()
 new io.bigdatabenchmark.v1.queries.q27.CompanyUDF() done
 OK
-Time taken: 0.772 seconds
+Time taken: 0.9 seconds
 hive.exec.compress.output=false
 hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 2.201 seconds
+Time taken: 0.066 seconds
 OK
-Time taken: 0.547 seconds
+Time taken: 0.503 seconds
 new io.bigdatabenchmark.v1.queries.q27.CompanyUDF()
 new io.bigdatabenchmark.v1.queries.q27.CompanyUDF() done
 new io.bigdatabenchmark.v1.queries.q27.CompanyUDF()
@@ -9419,33 +9363,33 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: product_reviews
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (pr_item_sk = 10002) (type: boolean)
-              Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: pr_review_sk (type: bigint), 10002 (type: bigint), pr_review_content (type: string)
                 outputColumnNames: _col0, _col1, _col2
-                Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
                 UDTF Operator
-                  Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
-                  function name: io.bigdatabenchmark.v1.queries.q27.CompanyUDF@7c0a6f62
+                  Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
+                  function name: io.bigdatabenchmark.v1.queries.q27.CompanyUDF@bd09a26
                   Select Operator
                     expressions: pr_sk (type: bigint), item_sk (type: bigint), company_name (type: string), review_sentence (type: string)
                     outputColumnNames: _col0, _col1, _col2, _col3
-                    Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+                    Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
                     Reduce Output Operator
                       key expressions: _col0 (type: bigint), _col1 (type: bigint), _col2 (type: string), _col3 (type: string)
                       sort order: ++++
-                      Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+                      Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
       Reduce Operator Tree:
         Select Operator
           expressions: KEY.reducesinkkey0 (type: bigint), KEY.reducesinkkey1 (type: bigint), KEY.reducesinkkey2 (type: string), KEY.reducesinkkey3 (type: string)
           outputColumnNames: _col0, _col1, _col2, _col3
-          Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
           File Output Operator
             compressed: false
-            Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
             table:
                 input format: org.apache.hadoop.mapred.TextInputFormat
                 output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -9465,11 +9409,11 @@ STAGE PLANS:
   Stage: Stage-2
     Stats-Aggr Operator
 
-Time taken: 4.329 seconds, Fetched: 57 row(s)
+Time taken: 4.671 seconds, Fetched: 57 row(s)
 ======= q27_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:06:58 1517198818
-Stop  timestamp: 2018/01/28:22:07:18 1517198838
-Duration:  0h 0m 20s
+Start timestamp: 2018/02/12:11:43:35 1518457415
+Stop  timestamp: 2018/02/12:11:43:54 1518457434
+Duration:  0h 0m 19s
 q27_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -9478,7 +9422,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q27_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q27_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q28/q28.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q28/query28.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q28/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q28
@@ -9492,8 +9436,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q28_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q28_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q28_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 =========================
 q28 step 1/3: Executing hive queries
@@ -9555,13 +9497,13 @@ hive.optimize.sampling.orderby=true
 hive.optimize.sampling.orderby.number=20000
 hive.optimize.sampling.orderby.percent=0.1
 OK
-Time taken: 1.882 seconds
+Time taken: 0.104 seconds
 OK
-Time taken: 0.785 seconds
+Time taken: 0.736 seconds
 OK
-Time taken: 0.131 seconds
+Time taken: 0.012 seconds
 OK
-Time taken: 0.088 seconds
+Time taken: 0.281 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-2 is a root stage
@@ -9576,27 +9518,27 @@ STAGE PLANS:
       Map Operator Tree:
           TableScan
             alias: product_reviews
-            Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
             Select Operator
               expressions: pr_review_sk (type: bigint), pr_review_rating (type: int), pr_review_content (type: string)
               outputColumnNames: _col0, _col1, _col2
-              Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
               Reduce Output Operator
                 key expressions: _col0 (type: bigint)
                 sort order: +
-                Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
                 value expressions: _col1 (type: int), _col2 (type: string)
       Reduce Operator Tree:
         Select Operator
           expressions: KEY.reducesinkkey0 (type: bigint), VALUE._col0 (type: int), VALUE._col1 (type: string)
           outputColumnNames: _col0, _col1, _col2
-          Statistics: Num rows: 89991 Data size: 79642032 Basic stats: COMPLETE Column stats: NONE
+          Statistics: Num rows: 89991 Data size: 79582043 Basic stats: COMPLETE Column stats: NONE
           Filter Operator
             predicate: ((_col0 pmod 10)) IN (1, 2, 3, 4, 5, 6, 7, 8, 9) (type: boolean)
-            Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
             File Output Operator
               compressed: false
-              Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
               table:
                   input format: org.apache.hadoop.mapred.TextInputFormat
                   output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -9604,10 +9546,10 @@ STAGE PLANS:
                   name: bigbench.q28_hive_run_query_0_temp_training
           Filter Operator
             predicate: ((_col0 pmod 10)) IN (0) (type: boolean)
-            Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
             File Output Operator
               compressed: false
-              Statistics: Num rows: 44995 Data size: 39820573 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 44995 Data size: 39790579 Basic stats: COMPLETE Column stats: NONE
               table:
                   input format: org.apache.hadoop.mapred.TextInputFormat
                   output format: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
@@ -9640,7 +9582,7 @@ STAGE PLANS:
   Stage: Stage-4
     Stats-Aggr Operator
 
-Time taken: 1.778 seconds, Fetched: 77 row(s)
+Time taken: 1.895 seconds, Fetched: 77 row(s)
 =========================
 q28 step 2/3: Train and Test Naive Bayes Classifier with spark - read from metastore table
 training and testing data: bigbench.q28_hive_run_query_0_temp_training
@@ -9655,9 +9597,9 @@ spark-submit --class io.bigdatabenchmark.v1.queries.q28.NaiveBayesClassifier /us
 ==========
 Please check the log files for details
 ======= q28_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:07:38 1517198858
-Stop  timestamp: 2018/01/28:22:07:55 1517198875
-Duration:  0h 0m 17s
+Start timestamp: 2018/02/12:11:44:13 1518457453
+Stop  timestamp: 2018/02/12:11:44:28 1518457468
+Duration:  0h 0m 15s
 q28_hive_run_query_0 FAILED exit code: 127 
 ----- result -----
 EMPTY  bytes: 0
@@ -9671,7 +9613,7 @@ An error occured while running command:
 runModule
 ==========
 Please check the log files for details
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q29/q29.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q29/query29.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q29/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q29
@@ -9685,9 +9627,7 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q29_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q29_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q29_hive_run_query_0_temp
-Duration for hdfs prepare:  0h 0m 17s
+Duration for hdfs prepare:  0h 0m 16s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q29/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/users/wentingt/apache-hive-2.3.2-bin/lib/log4j-slf4j-impl-2.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
@@ -9742,12 +9682,12 @@ hive.exec.submit.local.task.via.child=true
 Added [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/Resources/bigbenchqueriesmr.jar] to class path
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/Resources/bigbenchqueriesmr.jar]
 OK
-Time taken: 0.012 seconds
+Time taken: 0.011 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 2.058 seconds
+Time taken: 0.061 seconds
 OK
-Time taken: 0.463 seconds
+Time taken: 0.42 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-8 is a root stage
@@ -9768,14 +9708,14 @@ STAGE PLANS:
         $hdt$_0:$hdt$_0:$hdt$_1:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (i_category_id is not null and i_item_sk is not null) (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               Select Operator
                 expressions: i_item_sk (type: bigint), i_category_id (type: int)
                 outputColumnNames: _col0, _col11
-                Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+                Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
                 HashTable Sink Operator
                   keys:
                     0 _col3 (type: bigint)
@@ -9829,7 +9769,7 @@ STAGE PLANS:
             Statistics: Num rows: 367428 Data size: 671645288 Basic stats: COMPLETE Column stats: NONE
             UDTF Operator
               Statistics: Num rows: 367428 Data size: 671645288 Basic stats: COMPLETE Column stats: NONE
-              function name: io.bigdatabenchmark.v1.queries.udf.PairwiseUDTF@1d5958d3
+              function name: io.bigdatabenchmark.v1.queries.udf.PairwiseUDTF@3cb376a3
               Group By Operator
                 aggregations: count()
                 keys: itema (type: string), itemb (type: string)
@@ -9910,11 +9850,11 @@ STAGE PLANS:
   Stage: Stage-5
     Stats-Aggr Operator
 
-Time taken: 2.541 seconds, Fetched: 161 row(s)
+Time taken: 2.618 seconds, Fetched: 161 row(s)
 ======= q29_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:08:14 1517198894
-Stop  timestamp: 2018/01/28:22:08:32 1517198912
-Duration:  0h 0m 18s
+Start timestamp: 2018/02/12:11:44:46 1518457486
+Stop  timestamp: 2018/02/12:11:45:02 1518457502
+Duration:  0h 0m 16s
 q29_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
 EMPTY  bytes: 0
@@ -9923,7 +9863,7 @@ to display: hadoop fs -cat /user/wentingt/benchmarks/bigbench/queryResults/q29_h
 time&status: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/times.csv
 full log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q29_hive_run_query_0.log
 =========================
-@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q30/q30.sql
+@@@/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q30/query30.sql
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q30/engineLocalSettings.sql to hive init.
 ===============================================
 Running query : q30
@@ -9937,8 +9877,6 @@ log: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs/q30_hive_run_query_0.
 checking existence of local: /users/wentingt/Big-Data-Benchmark-for-Big-Bench/logs
 creating/cleaning/set permissions for hdfs tmp and result folders for this query
 hdfs client: hadoop fs
-Deleted /user/wentingt/benchmarks/bigbench/queryResults/q30_hive_run_query_0_result
-Deleted /user/wentingt/benchmarks/bigbench/temp/q30_hive_run_query_0_temp
 Duration for hdfs prepare:  0h 0m 17s
 Additional local hive settings found. Adding /users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q30/engineLocalSettings.sql to hive init.
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -9994,17 +9932,17 @@ hive.exec.submit.local.task.via.child=true
 Added [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/Resources/bigbenchqueriesmr.jar] to class path
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/Resources/bigbenchqueriesmr.jar]
 OK
-Time taken: 0.013 seconds
+Time taken: 0.01 seconds
 Added resources: [/users/wentingt/Big-Data-Benchmark-for-Big-Bench/engines/hive/queries/q30/q30-sessionize.py]
 OK
-Time taken: 0.073 seconds
+Time taken: 0.09 seconds
 OK
-Time taken: 0.844 seconds
+Time taken: 1.021 seconds
 hive.exec.compress.output=false
 OK
-Time taken: 1.509 seconds
+Time taken: 0.013 seconds
 OK
-Time taken: 0.319 seconds
+Time taken: 0.169 seconds
 OK
 STAGE DEPENDENCIES:
   Stage-9 is a root stage
@@ -10026,10 +9964,10 @@ STAGE PLANS:
         pairs:collectedlist:q30_hive_run_query_0_temp:q02_tmp_sessionize:clicksanwebpagetype:i 
           TableScan
             alias: i
-            Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+            Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
             Filter Operator
               predicate: (i_item_sk is not null and i_category_id is not null) (type: boolean)
-              Statistics: Num rows: 17820 Data size: 31238428 Basic stats: COMPLETE Column stats: NONE
+              Statistics: Num rows: 17820 Data size: 31235458 Basic stats: COMPLETE Column stats: NONE
               HashTable Sink Operator
                 keys:
                   0 wcs_item_sk (type: bigint)
@@ -10112,7 +10050,7 @@ STAGE PLANS:
               Statistics: Num rows: 1861901 Data size: 69667781 Basic stats: COMPLETE Column stats: NONE
               UDTF Operator
                 Statistics: Num rows: 1861901 Data size: 69667781 Basic stats: COMPLETE Column stats: NONE
-                function name: io.bigdatabenchmark.v1.queries.udf.PairwiseUDTF@29ccab93
+                function name: io.bigdatabenchmark.v1.queries.udf.PairwiseUDTF@2b80497f
                 Group By Operator
                   aggregations: count()
                   keys: itema (type: string), itemb (type: string)
@@ -10193,12 +10131,12 @@ STAGE PLANS:
   Stage: Stage-6
     Stats-Aggr Operator
 
-Time taken: 0.582 seconds, Fetched: 187 row(s)
+Time taken: 0.715 seconds, Fetched: 187 row(s)
 OK
-Time taken: 0.096 seconds
+Time taken: 1.478 seconds
 ======= q30_hive_run_query_0 time =======
-Start timestamp: 2018/01/28:22:08:51 1517198931
-Stop  timestamp: 2018/01/28:22:09:07 1517198947
+Start timestamp: 2018/02/12:11:45:21 1518457521
+Stop  timestamp: 2018/02/12:11:45:37 1518457537
 Duration:  0h 0m 16s
 q30_hive_run_query_0 SUCCESS exit code: 0 
 ----- result -----
